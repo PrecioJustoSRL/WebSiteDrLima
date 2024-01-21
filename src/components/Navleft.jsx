@@ -28,7 +28,7 @@ export default function Navbar({ children, funcion }) {
     }
 
     const handlerShare = () => {
-        window.open('https://wa.me/?text=https://estigma-dental.vercel.app/', '_blank')
+        window.open('https://wa.me/?text=https://web-site-dr-lima.vercel.app/', '_blank')
     }
     return (
         <>
