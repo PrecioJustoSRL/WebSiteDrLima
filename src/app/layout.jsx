@@ -15,10 +15,10 @@ export default function RootLayout({ children }) {
         <meta name="theme-color" content="#005578" />
         <meta name="msapplication-navbutton-color" content="#005578" />
         <meta name="apple-mobile-web-app-status-bar-style" content="#005578" />
-        <meta name="description" content="Especialistas en servicios odontologicos." />
+        <meta name="description" content="TRAUMATOLOGO ORTOPEDISTA." />
         <meta name="keywords" content="ESTIGMA DENTAL" />
         <meta name="author" content="ESTIGMA DENTAL" />
-        <title>ESTIGMA DENTAL</title>
+        <title>DR. ABRAHAM LIMA</title>
       </head>
       <body className={`${inter.className} bg-white`}>
       <UserProvider>

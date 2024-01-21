@@ -59,7 +59,7 @@ function Home() {
         <div className='w-full flex flex-col  justify-center lg:justify-around lg:w-[50vw] lg:h-auto pb-[99px] lg:pb-0 lg:p-12 lg:pt-[50px]  lg:pr-[10px]'>
           {/* <div className='hidden h-[30vh] w-[30vh] lg:block' style={{ backgroundImage: `url(${userDB.frontPage['urlIMG']})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
           </div> */}
-          <div className='w-full bg-red-500 hidden lg:flex lg:justify-center'>
+          <div className='w-full  hidden lg:flex lg:justify-center'>
             <img src={userDB.frontPage['urlIMG']} className='hidden h-[40vh]  lg:block' alt="" />
           </div>
           <h1 className='w-full hidden  lg:block text-center text-[12px] lg:text-[16px]'>{userDB.frontPage['direccion']} </h1>
@@ -67,9 +67,8 @@ function Home() {
 
           <div className='w-full py-5 px-[15px]' style={{ background: 'linear-gradient(to left, #CFE0E8, #ffffff)' }}>
 
-            <h1 className='w-full text-center text-[20px] lg:text-[30px]'><span className='text-[#005578] font-bold'>{userDB.frontPage['especialidad 1']}</span></h1>
-            <h1 className='w-full text-center text-[20px] lg:text-[30px]'><span className='text-[#000000] font-bold'>{userDB.frontPage['nombre']}</span></h1>
-
+            <h1 className='w-full text-center text-[20px] lg:text-[30px]'><span className='text-[#005578] font-bold'>{userDB.frontPage['nombre']}</span></h1>
+            <h1 className='w-full text-center text-[20px] lg:text-[30px]'><span className='text-[#000000] font-bold'>{userDB.frontPage['especialidad 1']}</span></h1>
 
             <h1 className='w-full text-left flex justify-between lg:text-[30px]'><span className=''>Lunes a Viernes</span><span className=' '>9:00 - 17:00</span></h1>
             <h1 className='w-full text-left  flex justify-between   lg:text-[30px]'><span className=''>Sabados</span><span className=' 	'>9:00 - 13:00</span></h1>
