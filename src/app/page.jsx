@@ -97,7 +97,7 @@ function Home() {
 
       <section className='w-full pt-[70px]' id="Servicios">
         <Subtitle>Servicios</Subtitle>
-        <div className='min-h-screen w-full flex flex-col justify-between items-center lg:flex-row justify-around items-center '>
+        <div className=' w-full flex flex-col justify-between items-center lg:flex-row justify-around items-center '>
           <ul className='min-w-[80%] grid grid-cols-1 gap-4'>
             {
               userDB && userDB.services !== undefined && userDB.services.map((i, index) =>
@@ -115,7 +115,7 @@ function Home() {
       </section>
       <section className='w-full pt-[70px]' id="Testimonios">
         <Subtitle>Testimonios</Subtitle>
-        <div className='min-h-screen w-full flex flex-col justify-between items-center lg:grid lg:grid-cols-3'>
+        <div className=' w-full flex flex-col justify-between items-center lg:grid lg:grid-cols-3'>
           {
             userDB && userDB.testimonies && userDB.testimonies !== undefined && Object.keys(userDB.testimonies).map((i, index) =>
               <div key={index}>
