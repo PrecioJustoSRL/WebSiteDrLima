@@ -32,7 +32,7 @@ export default function Navbar({ children }) {
             </div>
             <div className="max-w-screen flex flex-wrap items-center justify-between bg-[#005578] border-b-[5px] border-gray-200 mx-auto p-2 z-[1000]">
                 <a className="flex items-center text-white">
-                    <img src="/logo.png" className="h-5 mr-3 rounded-[5px]" alt="Flowbite Logo" /><span className='text-[12px]'>{userDB && userDB !== undefined && userDB.frontPage !== undefined && userDB.frontPage['nombre'] !== undefined && userDB.frontPage['nombre']}</span>
+                    <img src="/logo.png" className="h-[40px] mr-3 rounded-[5px]" alt="Flowbite Logo" /><span className='text-[12px]'>{userDB && userDB !== undefined && userDB.frontPage !== undefined && userDB.frontPage['nombre'] !== undefined && userDB.frontPage['nombre']}</span>
                 </a>
                 <button type="button" className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" onClick={() => setNav(!nav)}>
                     <span className="sr-only">Open menu</span>
