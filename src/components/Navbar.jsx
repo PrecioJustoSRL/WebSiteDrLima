@@ -27,8 +27,8 @@ export default function Navbar({ children }) {
     
     return (
         <nav className="w-screen fixed top-0 z-10 ">
-            <div className='bg-teal-500 py-1 text-center'>
-            Emergencias +591 76174846
+            <div className='bg-[#00BDE5] py-1 text-center'>
+           <marquee> Emergencias +591 76174846</marquee>
             </div>
             <div className="max-w-screen flex flex-wrap items-center justify-between bg-[#005578] border-b-[5px] border-gray-200 mx-auto p-2 z-[1000]">
                 <a className="flex items-center text-white">
