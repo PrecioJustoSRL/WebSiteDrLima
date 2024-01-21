@@ -32,10 +32,12 @@ export default function CardH({ image, service, description, remote, cost, time,
                     : ''}
                
                     <div className='lg:hidden relative w-full max-h-[300px] flex justify-center'>
-                        <img src={image} className="max-h-[300px]" alt="" />
+                        <img src={image} className="max-h-[100px]" alt="" />
                     </div>
-                 
-                <div className="px-2 py-4 md:p-4 flex flex-col justify-between leading-normal">
+                    
+                    <p className="text-gray-700 text-base text-center pt-10">{service}</p>
+
+                {/* <div className="px-2 py-4 md:p-4 flex flex-col justify-between leading-normal">
                     <div className="mb-8">
                         <div className=" font-bold text-xl mb-2 text-[#422C39]">
                             {service}
@@ -44,7 +46,7 @@ export default function CardH({ image, service, description, remote, cost, time,
                                 </span> {i.marca}
                             </p>
                         </div>
-                        <p className="text-gray-700 text-base">{description}</p>
+                        <p className="text-gray-700 text-base text-center">{service}</p>
                     </div>
 
                     <div className="flex items-baseline justify-between text-gray-900 dark:text-white">
@@ -58,7 +60,7 @@ export default function CardH({ image, service, description, remote, cost, time,
                             <Button theme='Secondary'>Solicitar ya...</Button>
                         </Link>
                     </div>
-                </div>
+                </div> */}
                 {index % 2 == 1
                     ? <div className='hidden lg:flex relative w-full max-h-[300px]  justify-center'>
                         <img src={image} className="max-h-[300px]" alt="" />
