@@ -45,28 +45,36 @@ function Home() {
   }
 
   return (
-    userDB && <main className="flex min-h-screen w-full flex-col items-center justify-between ">
+    userDB && <main className="flex min-h-screen w-full flex-col items-center justify-between " style={{ backgroundImage: `url(bg.png)`, backgroundSize: '100%', backgroundRepeat: 'no-repeat', backgroundPosition: 'right bottom', backgroundAttachment: 'fixed' }}>
       {userDB && <Modal theme={modal} i={item} />}
-      <section className='min-h-screen  w-full lg:pt-10 pb-0 flex flex-col justify-center  lg:flex-row items-center '>
-        <div className='w-screen h-[40vh] flex justify-center items-end lg:w-[50vw] lg:h-[100vh]' style={{ backgroundImage: `url(${userDB.frontPage['url']})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
+      <section className='min-h-screen pt-[90px] w-full lg:pt-10 pb-0 flex flex-col justify-center px-[15px] lg:flex-row items-center '>
+        <div className='w-full h-[45vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]' style={{ backgroundImage: `url(${userDB.frontPage['url']})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'top' }}>
         </div>
-      {/* <section className='relative h-screen w-full lg:pt-0 pb-0 flex flex-col justify-between items-center lg:grid lg:grid-cols-2 items-center bg-blue-500 pt-[82px] lg:pt-[78px]'>
+        {/* <section className='relative h-screen w-full lg:pt-0 pb-0 flex flex-col justify-between items-center lg:grid lg:grid-cols-2 items-center bg-blue-500 pt-[82px] lg:pt-[78px]'>
         <div className='w-screen h-[45vh] flex justify-center items-end lg:w-[50vw] bg-red-500   lg:h-full' style={{ backgroundImage: `url(${userDB.frontPage['url']})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
         </div> */}
         {/* <div className='inline-block relative w-screen h-[45vh]  lg:w-[50vw] bg-red-500 lg:h-full bg-#422C39-500'>
             <img src={userDB.frontPage['url']} className='inline-block relative w-full h-[90vh]' alt="" />
         </div> */}
-        <div className='w-full flex flex-col  justify-center lg:justify-around lg:w-[50vw] lg:h-auto pb-[99px] lg:pb-0 lg:p-12 lg:pt-[50px] px-[10px] lg:pr-[10px]'>
+        <div className='w-full flex flex-col  justify-center lg:justify-around lg:w-[50vw] lg:h-auto pb-[99px] lg:pb-0 lg:p-12 lg:pt-[50px]  lg:pr-[10px]'>
           {/* <div className='hidden h-[30vh] w-[30vh] lg:block' style={{ backgroundImage: `url(${userDB.frontPage['urlIMG']})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
           </div> */}
-          <div className='w-full hidden lg:flex lg:justify-center'>
-            <img src={userDB.frontPage['urlIMG']} className='hidden h-[30vh]  lg:block' alt="" />
+          <div className='w-full bg-red-500 hidden lg:flex lg:justify-center'>
+            <img src={userDB.frontPage['urlIMG']} className='hidden h-[40vh]  lg:block' alt="" />
           </div>
           <h1 className='w-full hidden  lg:block text-center text-[12px] lg:text-[16px]'>{userDB.frontPage['direccion']} </h1>
           <br />
-          <div>
-            <h1 className='w-full text-center text-[24px] lg:text-[30px]'><span className='text-[#32309D] font-bold'>{userDB.frontPage['nombre']}</span><span className='text-[#000032] font-bold	'>{userDB.frontPage['apellidos']}</span></h1>
-            <h1 className='w-full text-center text-[24px] lg:text-[30px]'><span className='text-[#32309D] font-bold'>{userDB.frontPage['especialidad 1']} </span><span className='text-[#000032] font-bold	'>{userDB.frontPage['especialidad 2']}</span></h1>
+
+          <div className='w-full py-5 px-[15px]' style={{ background: 'linear-gradient(to left, #CFE0E8, #ffffff)' }}>
+
+            <h1 className='w-full text-center text-[20px] lg:text-[30px]'><span className='text-[#005578] font-bold'>{userDB.frontPage['especialidad 1']}</span></h1>
+            <h1 className='w-full text-center text-[20px] lg:text-[30px]'><span className='text-[#000000] font-bold'>{userDB.frontPage['nombre']}</span></h1>
+
+
+            <h1 className='w-full text-left flex justify-between lg:text-[30px]'><span className=''>Lunes a Viernes</span><span className=' '>9:00 - 17:00</span></h1>
+            <h1 className='w-full text-left  flex justify-between   lg:text-[30px]'><span className=''>Sabados</span><span className=' 	'>9:00 - 13:00</span></h1>
+            <a href="#Servicios" className='w-full'><Button theme="Secondary" >Servicios</Button></a>
+            <Link href={`https://api.whatsapp.com/send?phone=${userDB.frontPage['whatsapp']}&text=Hola%20ESTIGMA%20DENTAL%20,%20quisiera%20hacer%20una%20consulta...%20`} className='w-full'><Button theme="Success" >Contactar</Button></Link>
           </div>
           <br />
           {/* <div className='w-full flex justify-around' >
@@ -79,12 +87,12 @@ function Home() {
           #422C39
           #422C39
           
-          
+    
           */}
-          <div className='w-full  lg:grid lg:grid-cols-2 lg:gap-5 '>
+          {/* <div className='w-full  lg:grid lg:grid-cols-2 lg:gap-5 '>
             <a href="#Servicios" className='w-full'><Button theme="Secondary" >Servicios</Button></a>
-            <Link href={`https://api.whatsapp.com/send?phone=${userDB.frontPage['whatsapp']}&text=Hola%20ESTIGMA%20DENTAL%20,%20quisiera%20hacer%20una%20consulta...%20`} className='w-full'><Button theme="Primary" >Contactar</Button></Link>
-          </div>
+            <Link href={`https://api.whatsapp.com/send?phone=${userDB.frontPage['whatsapp']}&text=Hola%20ESTIGMA%20DENTAL%20,%20quisiera%20hacer%20una%20consulta...%20`} className='w-full'><Button theme="Success" >Contactar</Button></Link>
+          </div> */}
         </div>
       </section>
 
@@ -98,7 +106,7 @@ function Home() {
                   <CardH image={i['url']} service={i['titulo de servicio']} description={i['descripcion de servicio']} remote={i['servicio remoto']} cost={i['costo']} time={i['tiempo de entrega']} whatsapp={i['whatsapp de servicio']} i={i} index={index}></CardH>
                   <div className="inline-flex items-center justify-center w-full">
                     <hr className="w-64 h-px my-8 bg-[#422C39] border-0 dark:bg-gray-700" />
-                    <span className="absolute px-3 font-medium text-[#000032] -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900 z-0">•</span>
+                    <span className="absolute px-3 font-medium text-[#005578] -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900 z-0">•</span>
                   </div>
                 </div>
               )
@@ -176,7 +184,7 @@ function Home() {
         </div>
       </div>
 
-      <footer className="w-screen bg-[#000032] text-center text-white mt-[70px] z-20" id="Contactos">
+      <footer className="w-screen bg-[#005578] text-center text-white mt-[70px] z-20" id="Contactos">
         <div className="p-4">
           <h3 className={`w-full text-white text-left font-bold text-[26px] pl-[5px]`}>Contactos</h3>
           <br />

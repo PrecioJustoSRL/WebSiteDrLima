@@ -27,9 +27,12 @@ export default function Navbar({ children }) {
     
     return (
         <nav className="w-screen fixed top-0 z-10 ">
-            <div className="max-w-screen flex flex-wrap items-center justify-between bg-[#000032] border-b-[10px] border-gray-200 mx-auto p-4 z-[1000]">
+            <div className='bg-teal-500 py-1 text-center'>
+            Emergencias +591 76174846
+            </div>
+            <div className="max-w-screen flex flex-wrap items-center justify-between bg-[#005578] border-b-[5px] border-gray-200 mx-auto p-2 z-[1000]">
                 <a className="flex items-center text-white">
-                    <img src="/logo.png" className="h-8 mr-3 rounded-[5px]" alt="Flowbite Logo" /><span className='text-[12px]'>ESTIGMA <br /> DENTAL</span>
+                    <img src="/logo.png" className="h-5 mr-3 rounded-[5px]" alt="Flowbite Logo" /><span className='text-[12px]'>ESTIGMA <br /> DENTAL</span>
                 </a>
                 <button type="button" className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" onClick={() => setNav(!nav)}>
                     <span className="sr-only">Open menu</span>
@@ -37,7 +40,7 @@ export default function Navbar({ children }) {
                 </button>
             </div>
             {<div className={`absolute top-[70px] w-1/2  transition-all z-0 ${nav ? 'right-0' : 'right-[-550px]'} lg:w-auto lg:right-[35px] lg:top-[0px] lg:flex lg:h-[60px]`} >
-                <ul className="h-[250px] lg:h-auto flex flex-col justify-around bg-[#000032] font-bold p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg  lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 lg:flex-row lg:items-center">
+                <ul className="h-[250px] lg:h-auto flex flex-col justify-around bg-[#005578] font-bold p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg  lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 lg:flex-row lg:items-center">
                     <li>
                         <a href="#" className={` lg:block py-2 pl-3 pr-4 text-white font-bold rounded lg:bg-transparent lg:p-0 ${active === undefined && 'text-black' }`} onClick={()=>pathnameHandler(undefined)}>Inicio</a>
                     </li>

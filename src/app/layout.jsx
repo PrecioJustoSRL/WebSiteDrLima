@@ -12,9 +12,9 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/logo.png" />
         <link rel='manifest' href='/manifest.json' />
         <link rel='apple-touch-icon' href='/logo.png' />
-        <meta name="theme-color" content="#000032" />
-        <meta name="msapplication-navbutton-color" content="#000032" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="#000032" />
+        <meta name="theme-color" content="#005578" />
+        <meta name="msapplication-navbutton-color" content="#005578" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#005578" />
         <meta name="description" content="Especialistas en servicios odontologicos." />
         <meta name="keywords" content="ESTIGMA DENTAL" />
         <meta name="author" content="ESTIGMA DENTAL" />

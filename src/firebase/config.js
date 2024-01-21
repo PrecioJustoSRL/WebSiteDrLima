@@ -3,12 +3,12 @@ import { initializeApp } from "firebase/app";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCAbgExJe7_cXu3vWu97-G9s02nBEvy9Ac",
-  authDomain: "estigma-dental-67b6b.firebaseapp.com",
-  databaseURL: "https://estigma-dental-67b6b-default-rtdb.firebaseio.com",
-  projectId: "estigma-dental-67b6b",
-  storageBucket: "estigma-dental-67b6b.appspot.com",
-  messagingSenderId: "82529735938",
-  appId: "1:82529735938:web:68d86206de1cdbdf831e1b"
+  apiKey: "AIzaSyD21K1DQEiwLAwhBJx-QGEqv4InOuwTXd4",
+  authDomain: "dr-lima.firebaseapp.com",
+  databaseURL: "https://dr-lima-default-rtdb.firebaseio.com",
+  projectId: "dr-lima",
+  storageBucket: "dr-lima.appspot.com",
+  messagingSenderId: "198707512379",
+  appId: "1:198707512379:web:5b51d6a4abeac79726481e"
 };
 export const app = initializeApp(firebaseConfig);

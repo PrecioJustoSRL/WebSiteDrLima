@@ -41,7 +41,7 @@ export default function Button({ theme, styled, click, children }) {
         case 'Secondary':
             return <button
                 type="submit"
-                className="text-white bg-[#000032] hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-[16px] w-full px-12 py-3 my-2 text-center"
+                className="text-white bg-[#005578] hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-[16px] w-full px-12 py-3 my-2 text-center"
                 // className="text-white bg-violet-700 hover:bg-violet-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center 
                 // dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 onClick={click}
@@ -52,7 +52,7 @@ export default function Button({ theme, styled, click, children }) {
         case 'Success':
             return <button
                 type="submit"
-                className="text-white bg-emerald-400 hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-[16px] w-full px-3 py-3 text-center"
+                className="text-white bg-teal-500 hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-[16px] w-full px-3 py-3 text-center"
                 // className="text-white bg-violet-700 hover:bg-violet-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center 
                 // dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 onClick={click}
