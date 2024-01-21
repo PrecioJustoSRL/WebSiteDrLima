@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
          <head>
         <link rel="icon" href="/favicon.png" />
         <link rel='manifest' href='/manifest.json' />
-        <link rel='apple-touch-icon' href='/logo.png' />
+        <link rel='apple-touch-icon' href='/favicon.png' />
         <meta name="theme-color" content="#005578" />
         <meta name="msapplication-navbutton-color" content="#005578" />
         <meta name="apple-mobile-web-app-status-bar-style" content="#005578" />
