@@ -120,7 +120,7 @@ function Home() {
 
       <section className='w-full pt-[70px]' id="Testimonios">
         <Subtitle>Testimonios</Subtitle>
-        <div className=' w-full flex flex-col justify-between items-center lg:grid lg:grid-cols-3'>
+        <div className=' w-full flex flex-col justify-between items-center lg:grid lg:grid-cols-3 px-5'>
           {
             userDB && userDB.testimonies && userDB.testimonies !== undefined && Object.keys(userDB.testimonies).map((i, index) =>
               <div key={index}>
