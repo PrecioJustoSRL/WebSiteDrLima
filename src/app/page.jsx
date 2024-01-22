@@ -11,6 +11,7 @@ import CardH from '@/components/CardH'
 import Modal from '@/components/Modal'
 import Navleft from '@/components/Navleft'
 import Link from 'next/link'
+import { Fade } from "react-awesome-reveal";
 
 import { WithAuth } from '@/HOCs/WithAuth'
 
@@ -99,10 +100,12 @@ function Home() {
         <Subtitle>Servicios</Subtitle>
         <div className=' w-full flex flex-col justify-between items-center lg:flex-row justify-around items-center '>
           <ul className='min-w-[80%] grid grid-cols-1 gap-4'>
-            {
+            <Fade cascade> {
               userDB && userDB.services !== undefined && userDB.services.map((i, index) =>
                 <div key={index}>
+                 
                   <CardH image={i['url']} service={i['titulo de servicio']} description={i['descripcion de servicio']} remote={i['servicio remoto']} cost={i['costo']} time={i['tiempo de entrega']} whatsapp={i['whatsapp de servicio']} i={i} index={index}></CardH>
+             
                   {/* <div className="inline-flex items-center justify-center w-full">
                     <hr className="w-64 h-px my-8 bg-[#422C39] border-0 dark:bg-gray-700" />
                     <span className="absolute px-3 font-medium text-[#005578] -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900 z-0">•</span>
@@ -110,6 +113,7 @@ function Home() {
                 </div>
               )
             }
+            </Fade>
           </ul>
         </div>
       </section>

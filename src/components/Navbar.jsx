@@ -39,7 +39,7 @@ export default function Navbar({ children }) {
                     <svg className="w-6 h-6" aria-hidden="true" fill="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"  ></path></svg>
                 </button>
             </div>
-            {<div className={`absolute top-[70px] w-1/2  transition-all z-0 ${nav ? 'right-0' : 'right-[-550px]'} lg:w-auto lg:right-[35px] lg:top-[0px] lg:flex lg:h-[60px]`} >
+            {<div className={`absolute top-[80px] w-1/2  transition-all z-0 ${nav ? 'right-0' : 'right-[-550px]'} lg:w-auto lg:right-[35px] lg:top-[0px] lg:flex lg:h-[60px]`} >
                 <ul className="h-[250px] lg:h-auto flex flex-col justify-around bg-[#005578] font-bold p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg  lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 lg:flex-row lg:items-center">
                     <li>
                         <a href="#" className={` lg:block py-2 pl-3 pr-4 text-white font-bold rounded lg:bg-transparent lg:p-0 ${active === undefined && 'text-black' }`} onClick={()=>pathnameHandler(undefined)}>Inicio</a>
