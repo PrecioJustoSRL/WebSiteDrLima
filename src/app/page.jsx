@@ -166,7 +166,7 @@ function Home() {
           <ul className='border-l-2 border-[#01C89E] pl-5 pt-5 pb-5 flex flex-col justify-center '>
             {
               userDB && userDB.articles !== undefined && Object.keys(userDB.articles).map((i, index) =>
-                <Slide cascade duration={1000} delay={100} direction={'left'}>
+                <Slide cascade duration={1000} delay={100} direction={'right'}>
 
                   <List i={i} url={userDB.articles[i] && userDB.articles[i]['url']} title={userDB.articles[i]['titulo de articulo']} key={index} />
                 </Slide>
