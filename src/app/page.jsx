@@ -67,33 +67,33 @@ function Home() {
           <br />
 
           <div className='w-full py-5 px-[15px]' style={{ background: 'linear-gradient(to left, #CFE0E8, #ffffff)' }}>
-            <JackInTheBox cascade duration={800} direction={'left'}>
+            <JackInTheBox cascade duration={1000} direction={'left'}>
               <h1 className='w-full text-center text-[20px] lg:text-[30px]'><span className='text-[#005578] font-bold'>{userDB.frontPage['nombre']}</span></h1>
             </JackInTheBox>
-            <JackInTheBox cascade duration={800} delay={100} direction={'left'}>
+            <JackInTheBox cascade duration={1000} delay={100} direction={'left'}>
               <h1 className='w-full text-center text-[20px] lg:text-[30px]'><span className='text-[#000000] font-bold'>{userDB.frontPage['especialidad 1']}</span></h1>
             </JackInTheBox>
 
             <h1 className='w-full text-left flex justify-between lg:text-[30px]'>
-              <Slide cascade duration={800} delay={100} direction={'left'}>
+              <Slide cascade duration={1000} delay={100} direction={'left'}>
                 <span className=''>Lunes a Viernes</span>
               </Slide>
-              <Slide cascade duration={800} delay={100} direction={'right'}>
+              <Slide cascade duration={1000} delay={100} direction={'right'}>
                 <span className=' '>9:00 - 17:00</span>
               </Slide>
             </h1>
             <h1 className='w-full text-left  flex justify-between   lg:text-[30px]'>
-              <Slide cascade duration={800} delay={100} direction={'left'}>
+              <Slide cascade duration={1000} delay={100} direction={'left'}>
                 <span className=''>Sabados</span>
               </Slide>
-              <Slide cascade duration={800} delay={100} direction={'right'}>
+              <Slide cascade duration={1000} delay={100} direction={'right'}>
                 <span className=' 	'>9:00 - 13:00</span>
               </Slide>
             </h1>
-            <Zoom duration={800}>
+            <Zoom duration={1000}>
               <a href="#Servicios" className='w-full'><Button theme="Secondary" >Servicios</Button></a>
             </Zoom>
-            <Zoom duration={800}>
+            <Zoom duration={1000}>
               <Link href={`https://api.whatsapp.com/send?phone=${userDB.frontPage['whatsapp']}&text=Hola%20ESTIGMA%20DENTAL%20,%20quisiera%20hacer%20una%20consulta...%20`} className='w-full'><Button theme="Success" >Contactar</Button></Link>
             </Zoom>
           </div>
