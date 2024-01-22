@@ -14,7 +14,6 @@ export default function List({ title, url, i }) {
         setUserModal('Referencias')
         setUserItem(i)
     }
-
     return (
         <>
             <li className={`block mb-2 text-sm text-left font-light text-gray-900 shadow-[0px_0px_3px_0.1px_#00A582] px-5`}>
