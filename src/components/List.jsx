@@ -11,12 +11,12 @@ export default function List({ title, url, i }) {
     }
 
     function handlerEditData() {
-        setUserModal('Referencias')
+        setUserModal('Articulos')
         setUserItem(i)
     }
     return (
         <>
-            <li className={`block mb-2 text-sm text-left font-light text-gray-900 shadow-[0px_0px_3px_0.1px_#00A582] px-5`}>
+            <li className={`block my-3 text-sm text-left font-light p-5 text-gray-900 shadow-[0px_0px_3px_0.1px_#00A582]`}>
                 <Link href={url} target='_blank'>{title}</Link>
             </li>
 
@@ -24,7 +24,6 @@ export default function List({ title, url, i }) {
                 <Button theme='Danger' click={handlerRemoveData}>Eliminar</Button>
                 <Button theme='Secondary' click={handlerEditData}>Editar</Button>
             </div>}
-
         </>
     )
 }   

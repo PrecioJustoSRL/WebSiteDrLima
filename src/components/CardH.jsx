@@ -26,7 +26,7 @@ export default function CardH({ image, service, description, remote, cost, time,
             <div className="w-full lg:max-w-full  md:grid lg:grid-cols-2 rounded-[15px] overflow-hidden mt-5">
                 {/* <div className="h-48 w-full rounded-t text-center md:hidden bg-blue-500" style={{ backgroundImage: `url(${image})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}></div> */}
                 {index % 2 == 0
-                    ? <div className='hidden lg:flex relative w-full max-h-[300px] flex justify-center'>
+                    ? <div className='hidden lg:flex relative w-full max-h-[300px]  justify-center'>
                         <img src={image} className="max-h-[300px]" alt="" />
                     </div>
                     : ''}

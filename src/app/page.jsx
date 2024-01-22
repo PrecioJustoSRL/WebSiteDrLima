@@ -49,7 +49,7 @@ function Home() {
     userDB && <main className="flex min-h-screen w-full flex-col items-center justify-between " style={{ backgroundImage: `url(bg.png)`, backgroundSize: '100%', backgroundRepeat: 'no-repeat', backgroundPosition: 'right bottom', backgroundAttachment: 'fixed' }}>
       {userDB && <Modal theme={modal} i={item} />}
       <section className='min-h-screen pt-[90px] w-full lg:pt-10 pb-0 flex flex-col justify-center px-[15px] lg:flex-row items-center '>
-        <div className='w-full h-[45vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]' style={{ backgroundImage: `url(${userDB.frontPage['url']})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'top' }}>
+        <div className='w-full h-[45vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]' style={{ backgroundImage: `url(${userDB.frontPage['url']})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'top' }}>
         </div>
         {/* <section className='relative h-screen w-full lg:pt-0 pb-0 flex flex-col justify-between items-center lg:grid lg:grid-cols-2 items-center bg-blue-500 pt-[82px] lg:pt-[78px]'>
         <div className='w-screen h-[45vh] flex justify-center items-end lg:w-[50vw] bg-red-500   lg:h-full' style={{ backgroundImage: `url(${userDB.frontPage['url']})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
@@ -98,7 +98,7 @@ function Home() {
 
       <section className='w-full pt-[70px]' id="Servicios">
         <Subtitle>Servicios</Subtitle>
-        <div className=' w-full flex flex-col justify-between items-center lg:flex-row justify-around items-center '>
+        <div className=' w-full flex flex-col justify-between items-center lg:flex-row'>
           <ul className='min-w-[80%] grid grid-cols-1 gap-4'>
             <Fade cascade> {
               userDB && userDB.services !== undefined && userDB.services.map((i, index) =>
@@ -117,6 +117,7 @@ function Home() {
           </ul>
         </div>
       </section>
+
       <section className='w-full pt-[70px]' id="Testimonios">
         <Subtitle>Testimonios</Subtitle>
         <div className=' w-full flex flex-col justify-between items-center lg:grid lg:grid-cols-3'>
@@ -129,9 +130,9 @@ function Home() {
           }
         </div>
       </section>
-      <section className='w-full pt-[70px]' id="Referencias">
-        <Subtitle>Referencias</Subtitle>
-        <div className='lg:grid lg:grid-cols-2 lg:gap-4 py-5 mt-5'>
+      <section className='w-full pt-[70px]' id="Articulos">
+        <Subtitle>Articulos</Subtitle>
+        <div className='lg:grid lg:grid-cols-2 lg:gap-4 p-5 mt-5'>
           <img src={userDB && userDB.articleIMG.IMG2023.url} className='relative left-0 right-0 top-0 bottom-0 m-auto h-full pt-5 pb-5' alt="" />
           <ul className='border-l-2 border-[#01C89E] pl-5 pt-5 pb-5 flex flex-col justify-center '>
             {
