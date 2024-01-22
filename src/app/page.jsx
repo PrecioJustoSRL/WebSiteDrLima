@@ -49,20 +49,26 @@ function Home() {
     userDB && <main className="flex min-h-screen w-full flex-col items-center justify-between max-w-screen overflow-x-hidden" style={{ backgroundImage: `url(bg.png)`, backgroundSize: '100%', backgroundRepeat: 'no-repeat', backgroundPosition: 'right bottom', backgroundAttachment: 'fixed' }}>
       {userDB && <Modal theme={modal} i={item} />}
       <section className='min-h-screen pt-[90px] w-full lg:pt-10 pb-0 flex flex-col justify-center px-[15px] lg:flex-row items-center '>
-        <div className='w-full h-[45vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]' style={{ backgroundImage: `url(${userDB.frontPage['url']})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'top' }}>
-        </div>
-        {/* <section className='relative h-screen w-full lg:pt-0 pb-0 flex flex-col justify-between items-center lg:grid lg:grid-cols-2 items-center bg-blue-500 pt-[82px] lg:pt-[78px]'>
-        <div className='w-screen h-[45vh] flex justify-center items-end lg:w-[50vw] bg-red-500   lg:h-full' style={{ backgroundImage: `url(${userDB.frontPage['url']})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
-        </div> */}
-        {/* <div className='inline-block relative w-screen h-[45vh]  lg:w-[50vw] bg-red-500 lg:h-full bg-#422C39-500'>
-            <img src={userDB.frontPage['url']} className='inline-block relative w-full h-[90vh]' alt="" />
-        </div> */}
+        {/* <div className='w-full h-[45vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]' style={{ backgroundImage: `url(${userDB.frontPage['url']})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'top' }}></div> */}
+
+
+        <Zoom cascade duration={1000}>
+
+          <div className='w-full h-[45vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]'>
+            <img src={userDB.frontPage['url']} className='inline-block relative w-full h-full object-contain' alt="" />
+          </div>
+        </Zoom >
+
         <div className='w-full flex flex-col  justify-center lg:justify-around lg:w-[50vw] lg:h-auto pb-[99px] lg:pb-0 lg:p-12 lg:pt-[50px]  lg:pr-[10px]'>
           {/* <div className='hidden h-[30vh] w-[30vh] lg:block' style={{ backgroundImage: `url(${userDB.frontPage['urlIMG']})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
           </div> */}
-          <div className='w-full  hidden lg:flex lg:justify-center'>
-            <img src={userDB.frontPage['urlIMG']} className='hidden h-[40vh]  lg:block' alt="" />
-          </div>
+          <JackInTheBox cascade duration={1000} direction={'left'}>
+
+            <div className='w-full  hidden lg:flex lg:justify-center'>
+              <img src={userDB.frontPage['urlIMG']} className='hidden h-[40vh]  lg:block' alt="" />
+            </div>
+          </JackInTheBox>
+
           <h1 className='w-full hidden  lg:block text-center text-[12px] lg:text-[16px]'>{userDB.frontPage['direccion']} </h1>
           <br />
 
@@ -159,7 +165,12 @@ function Home() {
           <img src={userDB && userDB.articleIMG.IMG2023.url} className='relative left-0 right-0 top-0 bottom-0 m-auto h-full pt-5 pb-5' alt="" />
           <ul className='border-l-2 border-[#01C89E] pl-5 pt-5 pb-5 flex flex-col justify-center '>
             {
-              userDB && userDB.articles !== undefined && Object.keys(userDB.articles).map((i, index) => <List i={i} url={userDB.articles[i] && userDB.articles[i]['url']} title={userDB.articles[i]['titulo de articulo']} key={index} />
+              userDB && userDB.articles !== undefined && Object.keys(userDB.articles).map((i, index) =>
+                <Slide cascade duration={1000} delay={100} direction={'left'}>
+
+                  <List i={i} url={userDB.articles[i] && userDB.articles[i]['url']} title={userDB.articles[i]['titulo de articulo']} key={index} />
+                </Slide>
+
               )
             }
           </ul>
