@@ -11,7 +11,7 @@ import CardH from '@/components/CardH'
 import Modal from '@/components/Modal'
 import Navleft from '@/components/Navleft'
 import Link from 'next/link'
-import { Fade } from "react-awesome-reveal";
+import { JackInTheBox, Zoom, Slide } from "react-awesome-reveal";
 
 import { WithAuth } from '@/HOCs/WithAuth'
 
@@ -67,14 +67,35 @@ function Home() {
           <br />
 
           <div className='w-full py-5 px-[15px]' style={{ background: 'linear-gradient(to left, #CFE0E8, #ffffff)' }}>
+            <JackInTheBox cascade duration={300} direction={'left'}>
+              <h1 className='w-full text-center text-[20px] lg:text-[30px]'><span className='text-[#005578] font-bold'>{userDB.frontPage['nombre']}</span></h1>
+            </JackInTheBox>
+            <JackInTheBox cascade duration={300} delay={100} direction={'left'}>
+              <h1 className='w-full text-center text-[20px] lg:text-[30px]'><span className='text-[#000000] font-bold'>{userDB.frontPage['especialidad 1']}</span></h1>
+            </JackInTheBox>
 
-            <h1 className='w-full text-center text-[20px] lg:text-[30px]'><span className='text-[#005578] font-bold'>{userDB.frontPage['nombre']}</span></h1>
-            <h1 className='w-full text-center text-[20px] lg:text-[30px]'><span className='text-[#000000] font-bold'>{userDB.frontPage['especialidad 1']}</span></h1>
-
-            <h1 className='w-full text-left flex justify-between lg:text-[30px]'><span className=''>Lunes a Viernes</span><span className=' '>9:00 - 17:00</span></h1>
-            <h1 className='w-full text-left  flex justify-between   lg:text-[30px]'><span className=''>Sabados</span><span className=' 	'>9:00 - 13:00</span></h1>
-            <a href="#Servicios" className='w-full'><Button theme="Secondary" >Servicios</Button></a>
-            <Link href={`https://api.whatsapp.com/send?phone=${userDB.frontPage['whatsapp']}&text=Hola%20ESTIGMA%20DENTAL%20,%20quisiera%20hacer%20una%20consulta...%20`} className='w-full'><Button theme="Success" >Contactar</Button></Link>
+            <h1 className='w-full text-left flex justify-between lg:text-[30px]'>
+              <Slide cascade duration={300} delay={100} direction={'left'}>
+                <span className=''>Lunes a Viernes</span>
+              </Slide>
+              <Slide cascade duration={300} delay={100} direction={'right'}>
+                <span className=' '>9:00 - 17:00</span>
+              </Slide>
+            </h1>
+            <h1 className='w-full text-left  flex justify-between   lg:text-[30px]'>
+              <Slide cascade duration={300} delay={100} direction={'left'}>
+                <span className=''>Sabados</span>
+              </Slide>
+              <Slide cascade duration={300} delay={100} direction={'right'}>
+                <span className=' 	'>9:00 - 13:00</span>
+              </Slide>
+            </h1>
+            <Zoom duration={300}>
+              <a href="#Servicios" className='w-full'><Button theme="Secondary" >Servicios</Button></a>
+            </Zoom>
+            <Zoom duration={300}>
+              <Link href={`https://api.whatsapp.com/send?phone=${userDB.frontPage['whatsapp']}&text=Hola%20ESTIGMA%20DENTAL%20,%20quisiera%20hacer%20una%20consulta...%20`} className='w-full'><Button theme="Success" >Contactar</Button></Link>
+            </Zoom>
           </div>
           <br />
           {/* <div className='w-full flex justify-around' >
@@ -100,12 +121,12 @@ function Home() {
         <Subtitle>Servicios</Subtitle>
         <div className=' w-full flex flex-col justify-between items-center lg:flex-row'>
           <ul className='min-w-[80%] grid grid-cols-1 gap-4'>
-            <Fade cascade> {
+            <JackInTheBox cascade duration={500} direction={'left'}> {
               userDB && userDB.services !== undefined && userDB.services.map((i, index) =>
                 <div key={index}>
-                 
+
                   <CardH image={i['url']} service={i['titulo de servicio']} description={i['descripcion de servicio']} remote={i['servicio remoto']} cost={i['costo']} time={i['tiempo de entrega']} whatsapp={i['whatsapp de servicio']} i={i} index={index}></CardH>
-             
+
                   {/* <div className="inline-flex items-center justify-center w-full">
                     <hr className="w-64 h-px my-8 bg-[#422C39] border-0 dark:bg-gray-700" />
                     <span className="absolute px-3 font-medium text-[#005578] -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900 z-0">•</span>
@@ -113,7 +134,7 @@ function Home() {
                 </div>
               )
             }
-            </Fade>
+            </JackInTheBox>
           </ul>
         </div>
       </section>
@@ -121,13 +142,15 @@ function Home() {
       <section className='w-full pt-[70px]' id="Testimonios">
         <Subtitle>Testimonios</Subtitle>
         <div className=' w-full flex flex-col justify-between items-center lg:grid lg:grid-cols-3 px-5'>
-          {
-            userDB && userDB.testimonies && userDB.testimonies !== undefined && Object.keys(userDB.testimonies).map((i, index) =>
-              <div key={index}>
-                <CardA image={userDB.testimonies[i].url} i={userDB.testimonies[i]} index={index}></CardA>
-              </div>
-            )
-          }
+          <Zoom>
+            {
+              userDB && userDB.testimonies && userDB.testimonies !== undefined && Object.keys(userDB.testimonies).map((i, index) =>
+                <div key={index}>
+                  <CardA image={userDB.testimonies[i].url} i={userDB.testimonies[i]} index={index}></CardA>
+                </div>
+              )
+            }
+          </Zoom>
         </div>
       </section>
       <section className='w-full pt-[70px]' id="Articulos">
