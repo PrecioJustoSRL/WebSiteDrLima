@@ -62,7 +62,7 @@ export default function Navbar({ children, funcion }) {
                     <span className="sr-only">Icon description</span>
                 </button>
             </div>}
-            <div className={`fixed bottom-0 left-0 z-0 w-full h-16 bg-white border-t border-gray-200  dark:bg-gray-700 dark:border-gray-600 lg:hidden`}>
+            <div className={`fixed bottom-0 left-0 z-40 w-full h-16 bg-white border-t border-gray-200  dark:bg-gray-700 dark:border-gray-600 lg:hidden`}>
 
                 <div className="relative grid h-full max-w-lg grid-cols-4 mx-auto font-medium z-50">
                     <a href="#" className="inline-flex flex-col items-center justify-end px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
