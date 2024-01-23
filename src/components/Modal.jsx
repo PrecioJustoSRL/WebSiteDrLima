@@ -156,7 +156,7 @@ export default function Modal({ theme, styled, click, children, }) {
                                     <div className="mt-4 flex text-sm leading-6 text-gray-600">
                                         <label htmlFor="fileUpload" className="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
                                             <span>Upload a file</span>
-                                            <input id="fileUpload" name="frontPage" onChange={handlerImage} type="file" className="sr-only" />
+                                            <input id="fileUpload" name="frontPage" onChange={handlerImage} type="file" accept='image/*' className="sr-only" />
                                         </label>
                                         <p className="pl-1">or drag and drop</p>
                                     </div>
@@ -232,7 +232,7 @@ export default function Modal({ theme, styled, click, children, }) {
                                     <div className="mt-4 flex text-sm leading-6 text-gray-600">
                                         <label htmlFor="servicioIMG" className="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
                                             <span>Foto de Servicio</span>
-                                            <input id="servicioIMG" name="servicioIMG" onChange={handlerImage} type="file" className="sr-only" />
+                                            <input id="servicioIMG" name="servicioIMG" onChange={handlerImage} type="file" accept='image/*' className="sr-only" />
                                         </label>
                                         <p className="pl-1">Puede ser GIF</p>
                                     </div>
@@ -314,7 +314,7 @@ export default function Modal({ theme, styled, click, children, }) {
                                     <div className="mt-4 flex text-sm leading-6 text-gray-600">
                                         <label htmlFor="servicioIMG" className="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
                                             <span>Upload a file</span>
-                                            <input id="servicioIMG" name="testimonioIMG" onChange={handlerImage} type="file" className="sr-only" />
+                                            <input id="servicioIMG" name="testimonioIMG" onChange={handlerImage} type="file" accept='image/*' className="sr-only" />
                                         </label>
                                         <p className="pl-1">or drag and drop</p>
                                     </div>
@@ -363,7 +363,7 @@ export default function Modal({ theme, styled, click, children, }) {
                                     <div className="mt-4 flex text-sm leading-6 text-gray-600">
                                         <label htmlFor="servicioIMG" className="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
                                             <span>Upload a file</span>
-                                            <input id="servicioIMG" name="articleIMG" onChange={handlerImage} type="file" className="sr-only" />
+                                            <input id="servicioIMG" name="articleIMG" onChange={handlerImage} type="file" accept='image/*' className="sr-only" />
                                         </label>
                                         <p className="pl-1">or drag and drop</p>
                                     </div>
