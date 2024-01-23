@@ -49,10 +49,17 @@ function Home() {
   return (
     userDB && <main className="flex min-h-screen w-full flex-col items-center justify-between max-w-screen overflow-x-hidden" style={{ backgroundImage: `url(bg.png)`, backgroundSize: '100%', backgroundRepeat: 'no-repeat', backgroundPosition: 'right bottom', backgroundAttachment: 'fixed' }}>
       {userDB && <Modal theme={modal} i={item} />}
-      <section className='min-h-screen pt-[120px] w-full lg:pt-10 pb-0 flex flex-col justify-center px-[15px] lg:flex-row items-center '>
+      <section className='min-h-screen pt-[100px] w-full lg:pt-10 pb-0 flex flex-col justify-center px-[15px] lg:flex-row items-center '>
         {/* <div className='w-full h-[45vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]' style={{ backgroundImage: `url(${userDB.frontPage['url']})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'top' }}></div> */}
 
+  <Zoom className='w-full h-[40vh] flex justify-center items-end lg:w-[50vw] lg:h-[100vh] mb-5'  cascade duration={1000}>
+                  <div className='w-full h-[40vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]' style={{ backgroundImage: `url(${userDB.frontPage['url']})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'top' }}></div>
 
+{/* 
+          <div className='w-full h-[45vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]'>
+            <img src={userDB.frontPage['url']} className='block relative w-full h-[45vh] object-cover' alt="" />
+          </div> */}
+        </Zoom >
 
         <div className='w-full flex flex-col  justify-center lg:justify-around lg:w-[50vw] lg:h-auto  lg:pb-0 lg:p-12 lg:pt-[50px]  lg:pr-[10px]'>
           {/* <div className='hidden h-[30vh] w-[30vh] lg:block' style={{ backgroundImage: `url(${userDB.frontPage['urlIMG']})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
@@ -141,14 +148,7 @@ function Home() {
           </div> */}
         </div>
         
-        <Zoom className='w-full h-[45vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]'  cascade duration={1000}>
-                  <div className='w-full h-[45vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]' style={{ backgroundImage: `url(${userDB.frontPage['url']})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'top' }}></div>
-
-{/* 
-          <div className='w-full h-[45vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]'>
-            <img src={userDB.frontPage['url']} className='block relative w-full h-[45vh] object-cover' alt="" />
-          </div> */}
-        </Zoom >
+      
       </section>
 
       <section className='w-full pt-[70px]' id="Servicios">
