@@ -52,8 +52,8 @@ function Home() {
       <section className='min-h-screen pt-[100px] pb-[70px] w-full lg:pt-10  flex flex-col justify-center px-[15px] lg:flex-row items-center '>
         {/* <div className='w-full h-[45vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]' style={{ backgroundImage: `url(${userDB.frontPage['url']})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'top' }}></div> */}
 
-  <Zoom className='w-full h-[35vh] flex justify-center items-end lg:w-[50vw] lg:h-[100vh] mb-5'  cascade duration={1000}>
-                  <div className='w-full h-[35vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]' style={{ backgroundImage: `url(${userDB.frontPage['url']})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'top' }}></div>
+  <Zoom className='w-full h-[30vh] flex justify-center items-end lg:w-[50vw] lg:h-[100vh] mb-5'  cascade duration={1000}>
+                  <div className='w-full h-[30vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]' style={{ backgroundImage: `url(${userDB.frontPage['url']})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'top' }}></div>
 
 {/* 
           <div className='w-full h-[45vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]'>
