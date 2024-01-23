@@ -49,18 +49,12 @@ function Home() {
   return (
     userDB && <main className="flex min-h-screen w-full flex-col items-center justify-between max-w-screen overflow-x-hidden" style={{ backgroundImage: `url(bg.png)`, backgroundSize: '100%', backgroundRepeat: 'no-repeat', backgroundPosition: 'right bottom', backgroundAttachment: 'fixed' }}>
       {userDB && <Modal theme={modal} i={item} />}
-      <section className='min-h-screen pt-[90px] w-full lg:pt-10 pb-0 flex flex-col justify-center px-[15px] lg:flex-row items-center '>
+      <section className='min-h-screen pt-[120px] w-full lg:pt-10 pb-0 flex flex-col justify-center px-[15px] lg:flex-row items-center '>
         {/* <div className='w-full h-[45vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]' style={{ backgroundImage: `url(${userDB.frontPage['url']})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'top' }}></div> */}
 
 
-        <Zoom cascade duration={1000}>
 
-          <div className='w-full h-[45vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]'>
-            <img src={userDB.frontPage['url']} className='inline-block relative w-full h-full object-contain' alt="" />
-          </div>
-        </Zoom >
-
-        <div className='w-full flex flex-col  justify-center lg:justify-around lg:w-[50vw] lg:h-auto pb-[99px] lg:pb-0 lg:p-12 lg:pt-[50px]  lg:pr-[10px]'>
+        <div className='w-full flex flex-col  justify-center lg:justify-around lg:w-[50vw] lg:h-auto  lg:pb-0 lg:p-12 lg:pt-[50px]  lg:pr-[10px]'>
           {/* <div className='hidden h-[30vh] w-[30vh] lg:block' style={{ backgroundImage: `url(${userDB.frontPage['urlIMG']})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
           </div> */}
           {/* <JackInTheBox cascade duration={1000} direction={'left'}>
@@ -146,6 +140,13 @@ function Home() {
             <Link href={`https://api.whatsapp.com/send?phone=${userDB.frontPage['whatsapp']}&text=Hola%20ESTIGMA%20DENTAL%20,%20quisiera%20hacer%20una%20consulta...%20`} className='w-full'><Button theme="Success" >Contactar</Button></Link>
           </div> */}
         </div>
+        
+        <Zoom cascade duration={1000}>
+
+          <div className='w-full h-[45vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]'>
+            <img src={userDB.frontPage['url']} className='inline-block relative w-full h-full object-cover' alt="" />
+          </div>
+        </Zoom >
       </section>
 
       <section className='w-full pt-[70px]' id="Servicios">
