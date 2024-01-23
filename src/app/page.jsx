@@ -226,7 +226,7 @@ function Home() {
         <div className='absolute top-0 left-0  w-full h-[50px] bg-[#00826A] rounded-t-[10px]'>
           <img src="/logo.png" className='absolute h-[35px] w-[35px] left-[5px] top-[7.5px]  rounded-[35px]' alt="" />
           <div className='absolute flex flex-col left-[50px] top-[12px] text-white text-[12px]'>
-            <span className='block text-[10px] m-0'>ESTIGMA DENTAL</span>
+            <span className='block text-[10px] m-0'>Dr Lima</span>
             <span className='text-[8px] m-0'>en linea</span>
           </div>
           <span className='absolute  right-[10px] top-[12px] px-[7.5px] py-[3px]  border-[1px] text-white text-[12px] rounded-[5px]' onClick={whatsappHandler} >X</span>
