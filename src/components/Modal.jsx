@@ -46,7 +46,6 @@ export default function Modal({ theme, styled, click, children, }) {
             [e.target[4].name]: e.target[4].value,
             [e.target[5].name]: e.target[5].value,
             [e.target[6].name]: e.target[6].value,
-            [e.target[7].name]: e.target[7].value,
         }
         e.target[0].files[0] && uploadIMG('frontPage', 'frontPage', 'frontPage', e.target[0].files[0], obj, setUserData, setUserSuccess, 'url')
         e.target[1].files[0] && uploadIMG('frontPage', 'frontIMG', 'frontIMG', e.target[1].files[0], obj, setUserData, setUserSuccess, 'urlIMG')
@@ -60,13 +59,13 @@ export default function Modal({ theme, styled, click, children, }) {
             ['servicio remoto']: check,
             [e.target[1].name]: e.target[1].value,
             [e.target[2].name]: e.target[2].value,
-            [e.target[3].name]: e.target[3].value,
-            [e.target[4].name]: e.target[4].value,
-            [e.target[5].name]: e.target[5].value,
-            [e.target[6].name]: e.target[6].value,
+            // [e.target[3].name]: e.target[3].value,
+            // [e.target[4].name]: e.target[4].value,
+            // [e.target[5].name]: e.target[5].value,
+            // [e.target[6].name]: e.target[6].value,
         }
 
-        console.log(obj)
+        console.log(e.target[0].files[0])
         e.target[0].files[0] && uploadIMG(`services/${item !== undefined ? item.uid : filename}`, 'services', filename, e.target[0].files[0], obj, setUserData, setUserSuccess, 'url')
         e.target[0].files[0] === undefined && writeUserData(`services/${item !== undefined ? item.uid : filename}`, obj, setUserData, setUserSuccess)
 
@@ -195,7 +194,7 @@ export default function Modal({ theme, styled, click, children, }) {
                             </div>
                             <div className="sm:col-span-3">
                                 <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Dirección</label>
-                                <input type="text" name="direccion" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.frontPage && data.frontPage['whatsapp']} />
+                                <input type="text" name="direccion" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.frontPage && data.frontPage['direccion']} />
                             </div>
                             <div className="sm:col-span-3">
                                 <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Whatsapp</label>

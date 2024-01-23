@@ -23,19 +23,19 @@ export default function CardH({ image, service, description, remote, cost, time,
 
     return (
         <>
-            <div className="w-full lg:max-w-full  md:grid lg:grid-cols-2 rounded-[15px] overflow-hidden mt-5">
+            <div className="w-full lg:max-w-full   rounded-[15px] overflow-hidden mt-5">
                 {/* <div className="h-48 w-full rounded-t text-center md:hidden bg-blue-500" style={{ backgroundImage: `url(${image})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}></div> */}
-                {index % 2 == 0
+                {/* {index % 2 == 0
                     ? <div className='hidden lg:flex relative w-full max-h-[300px]  justify-center'>
                         <img src={image} className="max-h-[300px]" alt="" />
                     </div>
-                    : ''}
+                    : ''} */}
                
-                    <div className='lg:hidden relative w-full max-h-[300px] flex justify-center'>
-                        <img src={image} className="max-h-[100px]" alt="" />
+                    <div className=' relative w-full max-h-[100px] flex justify-center'>
+                        <img src={image} className="max-h-[100px] text-center" alt="" />
                     </div>
                     
-                    <p className="text-gray-700 text-base text-center pt-10">{service}</p>
+                    <p className="text-gray-700 text-base text-center pt-5">{service}</p>
 
                 {/* <div className="px-2 py-4 md:p-4 flex flex-col justify-between leading-normal">
                     <div className="mb-8">
@@ -61,12 +61,12 @@ export default function CardH({ image, service, description, remote, cost, time,
                         </Link>
                     </div>
                 </div> */}
-                {index % 2 == 1
+                {/* {index % 2 == 1
                     ? <div className='hidden lg:flex relative w-full max-h-[300px]  justify-center'>
                         <img src={image} className="max-h-[300px]" alt="" />
                     </div>
                     : ''
-                }
+                } */}
             </div>
             {user && <div className='grid grid-cols-2 gap-1 lg:gap-5'>
                 <Button theme='Danger' click={handlerRemoveData}>Eliminar</Button>

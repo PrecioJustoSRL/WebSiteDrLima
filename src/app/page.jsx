@@ -45,6 +45,7 @@ function Home() {
     userDB && userDB.frontPage && userDB.frontPage['whatsapp'] && window.open(`https://api.whatsapp.com/send?phone=${userDB.frontPage['whatsapp']}&text=${whats}`, '_blank')
   }
 
+  console.log(userDB.frontPage['direccion'])
   return (
     userDB && <main className="flex min-h-screen w-full flex-col items-center justify-between max-w-screen overflow-x-hidden" style={{ backgroundImage: `url(bg.png)`, backgroundSize: '100%', backgroundRepeat: 'no-repeat', backgroundPosition: 'right bottom', backgroundAttachment: 'fixed' }}>
       {userDB && <Modal theme={modal} i={item} />}
@@ -62,38 +63,62 @@ function Home() {
         <div className='w-full flex flex-col  justify-center lg:justify-around lg:w-[50vw] lg:h-auto pb-[99px] lg:pb-0 lg:p-12 lg:pt-[50px]  lg:pr-[10px]'>
           {/* <div className='hidden h-[30vh] w-[30vh] lg:block' style={{ backgroundImage: `url(${userDB.frontPage['urlIMG']})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
           </div> */}
-          <JackInTheBox cascade duration={1000} direction={'left'}>
+          {/* <JackInTheBox cascade duration={1000} direction={'left'}>
 
             <div className='w-full  hidden lg:flex lg:justify-center'>
               <img src={userDB.frontPage['urlIMG']} className='hidden h-[40vh]  lg:block' alt="" />
             </div>
-          </JackInTheBox>
+          </JackInTheBox> */}
 
-          <h1 className='w-full hidden  lg:block text-center text-[12px] lg:text-[16px]'>{userDB.frontPage['direccion']} </h1>
-          <br />
+
+
 
           <div className='w-full py-5 px-[15px]' style={{ background: 'linear-gradient(to left, #CFE0E8, #ffffff)' }}>
             <JackInTheBox cascade duration={1000} direction={'left'}>
-              <h1 className='w-full text-center text-[20px] lg:text-[30px]'><span className='text-[#005578] font-bold'>{userDB.frontPage['nombre']}</span></h1>
+              <h1 className='w-full text-center text-[20px] lg:text-[16px]'>
+                <span className='text-[#005578] font-bold'>{userDB.frontPage['nombre']}</span>
+              </h1>
             </JackInTheBox>
             <JackInTheBox cascade duration={1000} delay={100} direction={'left'}>
-              <h1 className='w-full text-center text-[20px] lg:text-[30px]'><span className='text-[#000000] font-bold'>{userDB.frontPage['especialidad 1']}</span></h1>
+              <h1 className='w-full text-center text-[20px] lg:text-[16px]'>
+                <span className='text-[#000000] font-bold'>{userDB.frontPage['especialidad 1']}</span>
+              </h1>
             </JackInTheBox>
 
-            <h1 className='w-full text-left flex justify-between lg:text-[30px]'>
+            <h1 className='w-full text-left flex justify-between lg:text-[16px]'>
               <Slide cascade duration={1000} delay={100} direction={'left'}>
-                <span className=''>Lunes a Viernes</span>
+
+                <span className='flex'>
+                  <svg className='mr-3' width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 12L10 10V5M1 10C1 11.1819 1.23279 12.3522 1.68508 13.4442C2.13738 14.5361 2.80031 15.5282 3.63604 16.364C4.47177 17.1997 5.46392 17.8626 6.55585 18.3149C7.64778 18.7672 8.8181 19 10 19C11.1819 19 12.3522 18.7672 13.4442 18.3149C14.5361 17.8626 15.5282 17.1997 16.364 16.364C17.1997 15.5282 17.8626 14.5361 18.3149 13.4442C18.7672 12.3522 19 11.1819 19 10C19 8.8181 18.7672 7.64778 18.3149 6.55585C17.8626 5.46392 17.1997 4.47177 16.364 3.63604C15.5282 2.80031 14.5361 2.13738 13.4442 1.68508C12.3522 1.23279 11.1819 1 10 1C8.8181 1 7.64778 1.23279 6.55585 1.68508C5.46392 2.13738 4.47177 2.80031 3.63604 3.63604C2.80031 4.47177 2.13738 5.46392 1.68508 6.55585C1.23279 7.64778 1 8.8181 1 10Z" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+
+                  Lunes a Viernes</span>
               </Slide>
               <Slide cascade duration={1000} delay={100} direction={'right'}>
                 <span className=' '>9:00 - 17:00</span>
               </Slide>
             </h1>
-            <h1 className='w-full text-left  flex justify-between   lg:text-[30px]'>
+            <h1 className='w-full text-left  flex justify-between   lg:text-[16px]'>
               <Slide cascade duration={1000} delay={100} direction={'left'}>
-                <span className=''>Sabados</span>
+
+                <span className='flex'>
+                  <svg className='mr-3' width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 12L10 10V5M1 10C1 11.1819 1.23279 12.3522 1.68508 13.4442C2.13738 14.5361 2.80031 15.5282 3.63604 16.364C4.47177 17.1997 5.46392 17.8626 6.55585 18.3149C7.64778 18.7672 8.8181 19 10 19C11.1819 19 12.3522 18.7672 13.4442 18.3149C14.5361 17.8626 15.5282 17.1997 16.364 16.364C17.1997 15.5282 17.8626 14.5361 18.3149 13.4442C18.7672 12.3522 19 11.1819 19 10C19 8.8181 18.7672 7.64778 18.3149 6.55585C17.8626 5.46392 17.1997 4.47177 16.364 3.63604C15.5282 2.80031 14.5361 2.13738 13.4442 1.68508C12.3522 1.23279 11.1819 1 10 1C8.8181 1 7.64778 1.23279 6.55585 1.68508C5.46392 2.13738 4.47177 2.80031 3.63604 3.63604C2.80031 4.47177 2.13738 5.46392 1.68508 6.55585C1.23279 7.64778 1 8.8181 1 10Z" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  Sabados
+                </span>
               </Slide>
               <Slide cascade duration={1000} delay={100} direction={'right'}>
                 <span className=' 	'>9:00 - 13:00</span>
+              </Slide>
+            </h1>
+            <h1 className='  w-full text-left  flex   lg:text-[16px]'>
+
+              <Slide cascade duration={1000} delay={100} direction={'right'}>
+                <svg className='mr-3' width="20" height="20" viewBox="0 0 14 20" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.1894 4C14.1994 6.17 13.9694 8.73 12.8594 10.81C11.9194 12.5 10.5694 13.93 9.41939 15.5C8.91939 16.2 8.41939 16.95 8.04939 17.76C7.91939 18.03 7.82939 18.31 7.72939 18.59C7.62939 18.87 7.53939 19.15 7.44939 19.43C7.35939 19.69 7.24939 20 6.91939 20C6.52939 20 6.41939 19.56 6.33939 19.26C6.09939 18.53 5.85939 17.83 5.48939 17.16C5.06939 16.37 4.53939 15.64 3.99939 14.93L13.1894 4ZM4.03939 6.42L0.73939 10.34C1.34939 11.63 2.25939 12.73 3.12939 13.83C3.33939 14.08 3.54939 14.34 3.74939 14.61L7.91939 9.67L7.87939 9.68C6.41939 10.18 4.79939 9.44 4.21939 8C4.13939 7.83 4.07939 7.63 4.03939 7.43C3.98437 7.09894 3.98437 6.76106 4.03939 6.43V6.42ZM1.49939 2.62L1.48939 2.63C-0.13061 4.68 -0.41061 7.53 0.55939 9.94L4.54939 5.2L4.49939 5.15L1.49939 2.62ZM9.13939 0.36L5.91939 4.17L5.95939 4.16C7.29939 3.7 8.79939 4.28 9.47939 5.5C9.62939 5.78 9.74939 6.08 9.78939 6.38C9.84939 6.76 9.86939 7.03 9.79939 7.4V7.41L12.9994 3.61C12.1629 2.08939 10.7905 0.934448 9.14939 0.37L9.13939 0.36ZM4.80939 4.89L8.71939 0.24L8.67939 0.23C8.09939 0.08 7.50939 0 6.91939 0C4.94939 0 3.08939 0.85 1.76939 2.31L1.74939 2.32L4.80939 4.89Z" fill="#14b8a6" />
+                </svg> <span className=' 	'>{userDB.frontPage['direccion']}</span> 
               </Slide>
             </h1>
             <Zoom duration={1000}>
@@ -125,24 +150,22 @@ function Home() {
 
       <section className='w-full pt-[70px]' id="Servicios">
         <Subtitle>Servicios</Subtitle>
-        <div className=' w-full flex flex-col justify-between items-center lg:flex-row'>
-          <ul className='min-w-[80%] grid grid-cols-1 gap-4'>
-            <JackInTheBox cascade duration={500} direction={'left'}> {
-              userDB && userDB.services !== undefined && userDB.services.map((i, index) =>
-                <div key={index}>
+        <ul className='w-full flex flex-col justify-between items-center lg:grid lg:grid-cols-3 px-5'>
+          <JackInTheBox cascade duration={500} direction={'left'}> {
+            userDB && userDB.services !== undefined && userDB.services.map((i, index) =>
+              <div key={index}>
 
-                  <CardH image={i['url']} service={i['titulo de servicio']} description={i['descripcion de servicio']} remote={i['servicio remoto']} cost={i['costo']} time={i['tiempo de entrega']} whatsapp={i['whatsapp de servicio']} i={i} index={index}></CardH>
+                <CardH image={i['url']} service={i['titulo de servicio']} description={i['descripcion de servicio']} remote={i['servicio remoto']} cost={i['costo']} time={i['tiempo de entrega']} whatsapp={i['whatsapp de servicio']} i={i} index={index}></CardH>
 
-                  {/* <div className="inline-flex items-center justify-center w-full">
+                {/* <div className="inline-flex items-center justify-center w-full">
                     <hr className="w-64 h-px my-8 bg-[#422C39] border-0 dark:bg-gray-700" />
                     <span className="absolute px-3 font-medium text-[#005578] -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900 z-0">•</span>
                   </div> */}
-                </div>
-              )
-            }
-            </JackInTheBox>
-          </ul>
-        </div>
+              </div>
+            )
+          }
+          </JackInTheBox>
+        </ul>
       </section>
 
       <section className='w-full pt-[70px]' id="Testimonios">
