@@ -249,7 +249,7 @@ function Home() {
 
       <footer className="w-screen bg-[#005578] text-center text-white mt-[70px] z-20" id="Contactos">
         <div className="p-4">
-          <h3 className={`w-full text-white text-left font-bold text-[26px] pl-[5px]`}>Contactos</h3>
+          <h3 className={`w-full text-white text-left font-bold text-[18px] uppercase pl-[5px]`}>Contactos</h3>
           <br />
           <p className='w-full flex justify-start items-center py-4'>
             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
