@@ -76,12 +76,12 @@ function Home() {
 
           <div className='w-full min-h-[35vh] flex flex-col justify-around py-5 px-[15px]' style={{ background: 'linear-gradient(to left, #CFE0E8, #ffffff)' }}>
             <JackInTheBox cascade duration={1000} direction={'left'}>
-              <h1 className='w-full text-center text-[20px] lg:text-[16px]'>
+              <h1 className='w-full text-center text-[18px] lg:text-[16px]'>
                 <span className='text-[#005578] font-bold'>{userDB.frontPage['nombre']}</span>
               </h1>
             </JackInTheBox>
             <JackInTheBox cascade duration={1000} delay={100} direction={'left'}>
-              <h1 className='w-full text-center text-[20px] lg:text-[16px]'>
+              <h1 className='w-full text-center text-[18px] lg:text-[16px]'>
                 <span className='text-[#000000] font-bold'>{userDB.frontPage['especialidad 1']}</span>
               </h1>
             </JackInTheBox>
@@ -220,9 +220,9 @@ function Home() {
         </div>
       </section> */}
       <Navleft funcion={handlerState}></Navleft>
-      <img src="/whatsapp.svg" className="fixed h-[50px] w-[50px] bottom-[80px] right-[20px] lg:bottom-[20px] z-30" onClick={whatsappHandler} alt="" />
+      <img src="/whatsapp.svg" className="fixed h-[50px] w-[50px] bottom-[80px] right-[18px] lg:bottom-[18px] z-30" onClick={whatsappHandler} alt="" />
 
-      <div className={`w-[80%] max-w-[400px] fixed bottom-[80px] lg:bottom-[20px] right-[20px] pt-14 pb-9 px-2 flex flex-grow flex-col justify-end rounded-[10px] border-gray-200 shadow bg-[#F1E6E0] ${whatsapp ? 'fixed' : 'hidden'} z-50`} >
+      <div className={`w-[80%] max-w-[400px] fixed bottom-[80px] lg:bottom-[18px] right-[18px] pt-14 pb-9 px-2 flex flex-grow flex-col justify-end rounded-[10px] border-gray-200 shadow bg-[#F1E6E0] ${whatsapp ? 'fixed' : 'hidden'} z-50`} >
         <div className='absolute top-0 left-0  w-full h-[50px] bg-[#00826A] rounded-t-[10px]'>
           <img src="/logo.png" className='absolute h-[35px] w-[35px] left-[5px] top-[7.5px]  rounded-[35px]' alt="" />
           <div className='absolute flex flex-col left-[50px] top-[12px] text-white text-[12px]'>
@@ -242,8 +242,8 @@ function Home() {
         </div>
 
         <div className='flex absolute w-full left-0 bottom-0'>
-          <input type="text" className=' w-full text-[12px] rounded-[20px] outline-none px-[10px] py-[2px]' onChange={onChangeWhatsapp} />
-          <span className='w-[28px] p-[5px] bg-[#00826A] rounded-[20px]' onClick={handlerSendWhatsapp}><img src="/send.svg" className='h-[18px]' alt="" /></span>
+          <input type="text" className=' w-full text-[12px] rounded-[18px] outline-none px-[10px] py-[2px]' onChange={onChangeWhatsapp} />
+          <span className='w-[28px] p-[5px] bg-[#00826A] rounded-[18px]' onClick={handlerSendWhatsapp}><img src="/send.svg" className='h-[18px]' alt="" /></span>
         </div>
       </div>
 
@@ -255,7 +255,7 @@ function Home() {
             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M31.7656 33.5626L35.2656 30.0626C35.737 29.597 36.3335 29.2783 36.9825 29.1452C37.6315 29.012 38.3052 29.0702 38.9219 29.3126L43.1875 31.0157C43.8106 31.2686 44.3449 31.7004 44.7231 32.2565C45.1013 32.8126 45.3063 33.4682 45.3125 34.1407V41.9532C45.3089 42.4107 45.2127 42.8627 45.0298 43.282C44.8469 43.7013 44.581 44.0793 44.2482 44.3931C43.9153 44.707 43.5224 44.9502 43.0931 45.1083C42.6637 45.2663 42.2069 45.3358 41.75 45.3126C11.8594 43.4532 5.82812 18.1407 4.6875 8.45319C4.63455 7.97746 4.68292 7.49592 4.82945 7.04024C4.97597 6.58455 5.21731 6.16505 5.5376 5.80934C5.85789 5.45363 6.24987 5.16976 6.68774 4.97641C7.12562 4.78307 7.59947 4.68463 8.07812 4.68756H15.625C16.2984 4.68956 16.9559 4.89298 17.5128 5.27167C18.0697 5.65036 18.5006 6.187 18.75 6.81256L20.4531 11.0782C20.7035 11.6924 20.7674 12.3667 20.6368 13.017C20.5062 13.6672 20.1869 14.2646 19.7187 14.7344L16.2187 18.2344C16.2187 18.2344 18.2344 31.8751 31.7656 33.5626Z" fill="white" />
             </svg>
-            <span className='pl-[20px]'>
+            <span className='pl-[18px]'>
               {userDB.contactos && userDB.contactos.telefono} - {userDB.contactos && userDB.contactos.celular}
             </span>
           </p>
@@ -271,7 +271,7 @@ function Home() {
                 </clipPath>
               </defs>
             </svg>
-            <span className='pl-[20px]'>
+            <span className='pl-[18px]'>
               {userDB.contactos && userDB.contactos.gmail}
 
             </span>
