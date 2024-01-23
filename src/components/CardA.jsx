@@ -19,7 +19,7 @@ export default function Card({ i }) {
 
                 <div className="w-full flex flex-col items-center ">
                     <img className="w-[150px] h-[150px] mb-3 rounded-full shadow-lg" src={i.url} alt="Bonnie image" />
-                    <h5 className="mb-1 text-xl font-medium text-gray-900  text-[16px]">{i.perfil}</h5>
+                    <h5 className="mb-1 font-medium text-gray-900  text-[16px]">{i.perfil}</h5>
                     {/* <span className="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span> */}
                     <p className="w-full text-gray-950 text-center italic p-5 rounded-[10px] text-[14px]" style={{ background: 'linear-gradient(to left, #CFE0E8, #ffffff)' }}>"{i.testimonio}"</p>
                     {/* <Button theme='Primary'>Contactar</Button> */}
