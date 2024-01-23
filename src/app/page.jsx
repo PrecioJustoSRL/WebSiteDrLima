@@ -74,7 +74,7 @@ function Home() {
 
 
 
-          <div className='w-full py-5 px-[15px]' style={{ background: 'linear-gradient(to left, #CFE0E8, #ffffff)' }}>
+          <div className='w-full min-h-[40vh] flex flex-col justify-around py-5 px-[15px]' style={{ background: 'linear-gradient(to left, #CFE0E8, #ffffff)' }}>
             <JackInTheBox cascade duration={1000} direction={'left'}>
               <h1 className='w-full text-center text-[20px] lg:text-[16px]'>
                 <span className='text-[#005578] font-bold'>{userDB.frontPage['nombre']}</span>
