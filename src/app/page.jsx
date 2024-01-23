@@ -141,11 +141,13 @@ function Home() {
           </div> */}
         </div>
         
-        <Zoom cascade duration={1000}>
+        <Zoom className='w-full h-[45vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]'  cascade duration={1000}>
+                  <div className='w-full h-[45vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]' style={{ backgroundImage: `url(${userDB.frontPage['url']})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'top' }}></div>
 
+{/* 
           <div className='w-full h-[45vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]'>
-            <img src={userDB.frontPage['url']} className='inline-block relative w-full h-full object-cover' alt="" />
-          </div>
+            <img src={userDB.frontPage['url']} className='block relative w-full h-[45vh] object-cover' alt="" />
+          </div> */}
         </Zoom >
       </section>
 
