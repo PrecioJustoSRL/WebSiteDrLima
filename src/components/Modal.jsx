@@ -41,15 +41,17 @@ export default function Modal({ theme, styled, click, children, }) {
     function saveFrontPage(e) {
         e.preventDefault()
         const obj = {
+            [e.target[1].name]: e.target[1].value,
             [e.target[2].name]: e.target[2].value,
             [e.target[3].name]: e.target[3].value,
             [e.target[4].name]: e.target[4].value,
-            [e.target[5].name]: e.target[5].value,
-            [e.target[6].name]: e.target[6].value,
+            // [e.target[6].name]: e.target[6].value,
         }
         e.target[0].files[0] && uploadIMG('frontPage', 'frontPage', 'frontPage', e.target[0].files[0], obj, setUserData, setUserSuccess, 'url')
-        e.target[1].files[0] && uploadIMG('frontPage', 'frontIMG', 'frontIMG', e.target[1].files[0], obj, setUserData, setUserSuccess, 'urlIMG')
-        e.target[0].files[0] === undefined && e.target[1].files[0] === undefined && writeUserData('frontPage', obj, setUserData, setUserSuccess)
+        // e.target[1].files[0] && uploadIMG('frontPage', 'frontIMG', 'frontIMG', e.target[1].files[0], obj, setUserData, setUserSuccess, 'urlIMG')
+        // e.target[0].files[0] === undefined && e.target[1].files[0] === undefined && writeUserData('frontPage', obj, setUserData, setUserSuccess)
+        e.target[0].files[0] === undefined && writeUserData('frontPage', obj, setUserData, setUserSuccess)
+
     }
     function addService(e) {
         e.preventDefault()
@@ -94,11 +96,12 @@ export default function Modal({ theme, styled, click, children, }) {
         const obj = {
             [e.target[1].name]: e.target[1].value,
             [e.target[2].name]: e.target[2].value,
+            uuid: item !== undefined ? item.uuid : filename
         }
 
         console.log(obj)
-        e.target[0].files[0] && uploadIMG(`testimonies/${item !== undefined ? item.uid : filename}`, 'testimonies', filename, e.target[0].files[0], obj, setUserData, setUserSuccess, 'url')
-        e.target[0].files[0] === undefined && writeUserData(`testimonies/${item !== undefined ? item.uid : filename}`, obj, setUserData, setUserSuccess)
+        e.target[0].files[0] && uploadIMG(`testimonies/${item !== undefined ? item.uuid : filename}`, 'testimonies', filename, e.target[0].files[0], obj, setUserData, setUserSuccess, 'url')
+        e.target[0].files[0] === undefined && writeUserData(`testimonies/${item !== undefined ? item.uuid : filename}`, obj, setUserData, setUserSuccess)
 
     }
 
@@ -136,7 +139,7 @@ export default function Modal({ theme, styled, click, children, }) {
         item === undefined && setCheck(false)
     }, [userDB, data, item])
 
-    console.log(check)
+    console.log(item)
     switch (theme) {
         case 'Portada':
             return <div className="fixed top-0 left-0 flex justify-center w-full h-auto bg-[#000000b4] p-0 z-40 " >
@@ -162,7 +165,7 @@ export default function Modal({ theme, styled, click, children, }) {
                             </div>
                         </div>
                     </div>
-                    <div className="col-span-full">
+                    {/* <div className="hidden col-span-full">
                         <label htmlFor="cover-photo" className="block text-sm font-medium leading-6 text-gray-900">Imagen de portada</label>
                         <div className="w-full flex justify-center">
                             <div className="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10 md:w-[250px] md:h-[200px]" style={{ backgroundImage: `url('${dataURL && dataURL.frontIMG && dataURL.frontIMG ? dataURL.frontIMG : (userDB && userDB.frontPage && userDB.frontPage.urlIMG)}')`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
@@ -181,7 +184,7 @@ export default function Modal({ theme, styled, click, children, }) {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="border-b border-gray-900/10 pb-12">
                         <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                             <div className="sm:col-span-3">
@@ -326,11 +329,11 @@ export default function Modal({ theme, styled, click, children, }) {
                         <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                             <div className="sm:col-span-3">
                                 <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Nombre</label>
-                                <input type="text" name="perfil" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.articles && data.articles[item] && data.articles[item]['titulo de #Articulos']} />
+                                <input type="text" name="perfil" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={item && item.perfil} />
                             </div>
                             <div className="sm:col-span-3">
                                 <label htmlFor="last-name" className="block text-sm font-medium leading-6 text-gray-900">Testimonio</label>
-                                <input type="text" name="testimonio" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.articles && data.articles[item] && data.articles[item]['url']} />
+                                <input type="text" name="testimonio" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={item && item.testimonio} />
                             </div>
                         </div>
                     </div>

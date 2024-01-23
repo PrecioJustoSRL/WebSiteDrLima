@@ -45,7 +45,7 @@ function Home() {
     userDB && userDB.frontPage && userDB.frontPage['whatsapp'] && window.open(`https://api.whatsapp.com/send?phone=${userDB.frontPage['whatsapp']}&text=${whats}`, '_blank')
   }
 
-  console.log(userDB.frontPage['direccion'])
+  console.log(userDB)
   return (
     userDB && <main className="flex min-h-screen w-full flex-col items-center justify-between max-w-screen overflow-x-hidden" style={{ backgroundImage: `url(bg.png)`, backgroundSize: '100%', backgroundRepeat: 'no-repeat', backgroundPosition: 'right bottom', backgroundAttachment: 'fixed' }}>
       {userDB && <Modal theme={modal} i={item} />}
@@ -173,9 +173,9 @@ function Home() {
         <div className=' w-full flex flex-col justify-between items-center lg:grid lg:grid-cols-3 px-5'>
           <Zoom>
             {
-              userDB && userDB.testimonies && userDB.testimonies !== undefined && Object.keys(userDB.testimonies).map((i, index) =>
+              userDB && userDB.testimonies && userDB.testimonies !== undefined && Object.values(userDB.testimonies).map((i, index) =>
                 <div key={index}>
-                  <CardA image={userDB.testimonies[i].url} i={userDB.testimonies[i]} index={index}></CardA>
+                  <CardA image={i.url} i={i} index={index}></CardA>
                 </div>
               )
             }
