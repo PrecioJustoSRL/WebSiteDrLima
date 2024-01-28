@@ -209,7 +209,7 @@ export default function Modal({ theme, styled, click, children, }) {
                     <div className="mt-6 flex items-center justify-end gap-x-6">
                         <Button type="submit" theme="Primary">Guardar</Button>
                     </div>
-                    <div className="absolute w-[50px] top-5 right-5 text-white p-1 rounded-tl-lg rounded-br-lg text-center bg-red-600" onClick={close}>
+                    <div className="absolute w-[50px] top-5 right-5 text-gray-800 p-1 rounded-tl-lg rounded-br-lg text-center bg-red-600" onClick={close}>
                         X
                     </div>
                 </form>
@@ -290,7 +290,7 @@ export default function Modal({ theme, styled, click, children, }) {
                     <div className="mt-6 flex items-center justify-end gap-x-6">
                         <Button type="submit" theme="Primary" >Guardar</Button>
                     </div>
-                    <div className="absolute w-[50px] top-5 right-5 text-white p-1 rounded-tl-lg rounded-br-lg text-center bg-red-600" onClick={close}>
+                    <div className="absolute w-[50px] top-5 right-5 text-gray-800 p-1 rounded-tl-lg rounded-br-lg text-center bg-red-600" onClick={close}>
                         X
                     </div>
 
@@ -340,7 +340,7 @@ export default function Modal({ theme, styled, click, children, }) {
                     <div className="mt-6 flex items-center justify-end gap-x-6">
                         <Button type="submit" theme="Primary" >Guardar</Button>
                     </div>
-                    <div className="absolute w-[50px] top-5 right-5 text-white p-1 rounded-tl-lg rounded-br-lg text-center bg-red-600" onClick={close}>
+                    <div className="absolute w-[50px] top-5 right-5 text-gray-800 p-1 rounded-tl-lg rounded-br-lg text-center bg-red-600" onClick={close}>
                         X
                     </div>
                 </form>
@@ -389,7 +389,7 @@ export default function Modal({ theme, styled, click, children, }) {
                     <div className="mt-6 flex items-center justify-end gap-x-6">
                         <Button type="submit" theme="Primary" >Guardar</Button>
                     </div>
-                    <div className="absolute w-[50px] top-5 right-5 text-white p-1 rounded-tl-lg rounded-br-lg text-center bg-red-600" onClick={close}>
+                    <div className="absolute w-[50px] top-5 right-5 text-gray-800 p-1 rounded-tl-lg rounded-br-lg text-center bg-red-600" onClick={close}>
                         X
                     </div>
                 </form>
@@ -448,7 +448,7 @@ export default function Modal({ theme, styled, click, children, }) {
                     <div className="mt-6 flex items-center justify-end gap-x-6">
                         <Button type="submit" theme="Primary" >Guardar</Button>
                     </div>
-                    <div className="absolute w-[50px] top-5 right-5 text-white p-1 rounded-tl-lg rounded-br-lg text-center bg-red-600" onClick={close}>
+                    <div className="absolute w-[50px] top-5 right-5 text-gray-800 p-1 rounded-tl-lg rounded-br-lg text-center bg-red-600" onClick={close}>
                         X
                     </div>
                 </form>

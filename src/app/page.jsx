@@ -52,10 +52,10 @@ function Home() {
       <section className='min-h-screen pt-[100px] pb-[70px] w-full lg:pt-10  flex flex-col justify-center px-[15px] lg:flex-row items-center '>
         {/* <div className='w-full h-[45vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]' style={{ backgroundImage: `url(${userDB.frontPage['url']})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'top' }}></div> */}
 
-  <Zoom className='w-full h-[30vh] flex justify-center items-end lg:w-[50vw] lg:h-[100vh] mb-5'  cascade duration={1000}>
-                  <div className='w-full h-[30vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]' style={{ backgroundImage: `url(${userDB.frontPage['url']})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'top' }}></div>
+        <Zoom className='w-full h-[30vh] flex justify-center items-end lg:w-[50vw] lg:h-[100vh] mb-5' cascade duration={1000}>
+          <div className='w-full h-[30vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]' style={{ backgroundImage: `url(${userDB.frontPage['url']})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'top' }}></div>
 
-{/* 
+          {/* 
           <div className='w-full h-[45vh] flex justify-center items-end px-[15px] lg:w-[50vw] lg:h-[100vh]'>
             <img src={userDB.frontPage['url']} className='block relative w-full h-[45vh] object-cover' alt="" />
           </div> */}
@@ -77,7 +77,7 @@ function Home() {
           <div className='w-full min-h-[35vh] flex flex-col justify-around py-5 px-[15px]' style={{ background: 'linear-gradient(to left, #CFE0E8, #ffffff)' }}>
             <JackInTheBox cascade duration={1000} direction={'left'}>
               <h1 className='w-full text-center text-[18px] lg:text-[16px]'>
-                <span className='text-[#005578] font-bold'>{userDB.frontPage['nombre']}</span>
+                <span className='text-[#7fffd4] font-bold'>{userDB.frontPage['nombre']}</span>
               </h1>
             </JackInTheBox>
             <JackInTheBox cascade duration={1000} delay={100} direction={'left'}>
@@ -119,15 +119,17 @@ function Home() {
               <Slide cascade duration={1000} delay={100} direction={'right'}>
                 <svg className='mr-3' width="20" height="20" viewBox="0 0 14 20" xmlns="http://www.w3.org/2000/svg">
                   <path d="M13.1894 4C14.1994 6.17 13.9694 8.73 12.8594 10.81C11.9194 12.5 10.5694 13.93 9.41939 15.5C8.91939 16.2 8.41939 16.95 8.04939 17.76C7.91939 18.03 7.82939 18.31 7.72939 18.59C7.62939 18.87 7.53939 19.15 7.44939 19.43C7.35939 19.69 7.24939 20 6.91939 20C6.52939 20 6.41939 19.56 6.33939 19.26C6.09939 18.53 5.85939 17.83 5.48939 17.16C5.06939 16.37 4.53939 15.64 3.99939 14.93L13.1894 4ZM4.03939 6.42L0.73939 10.34C1.34939 11.63 2.25939 12.73 3.12939 13.83C3.33939 14.08 3.54939 14.34 3.74939 14.61L7.91939 9.67L7.87939 9.68C6.41939 10.18 4.79939 9.44 4.21939 8C4.13939 7.83 4.07939 7.63 4.03939 7.43C3.98437 7.09894 3.98437 6.76106 4.03939 6.43V6.42ZM1.49939 2.62L1.48939 2.63C-0.13061 4.68 -0.41061 7.53 0.55939 9.94L4.54939 5.2L4.49939 5.15L1.49939 2.62ZM9.13939 0.36L5.91939 4.17L5.95939 4.16C7.29939 3.7 8.79939 4.28 9.47939 5.5C9.62939 5.78 9.74939 6.08 9.78939 6.38C9.84939 6.76 9.86939 7.03 9.79939 7.4V7.41L12.9994 3.61C12.1629 2.08939 10.7905 0.934448 9.14939 0.37L9.13939 0.36ZM4.80939 4.89L8.71939 0.24L8.67939 0.23C8.09939 0.08 7.50939 0 6.91939 0C4.94939 0 3.08939 0.85 1.76939 2.31L1.74939 2.32L4.80939 4.89Z" fill="#14b8a6" />
-                </svg> <span className=' 	'>{userDB.frontPage['direccion']}</span> 
+                </svg> <span className=' 	'>{userDB.frontPage['direccion']}</span>
               </Slide>
             </h1>
-            <Zoom duration={1000}>
-              <a href="#Servicios" className='w-full'><Button theme="Secondary" >Servicios</Button></a>
-            </Zoom>
-            <Zoom duration={1000}>
-              <Link href={`https://api.whatsapp.com/send?phone=${userDB.frontPage['whatsapp']}&text=Hola%20ESTIGMA%20DENTAL%20,%20quisiera%20hacer%20una%20consulta...%20`} className='w-full'><Button theme="Success" >Contactar</Button></Link>
-            </Zoom>
+            <div>
+              <Zoom duration={1000}>
+                <Link href={`https://api.whatsapp.com/send?phone=${userDB.frontPage['whatsapp']}&text=Hola%20ESTIGMA%20DENTAL%20,%20quisiera%20hacer%20una%20consulta...%20`} className='w-full'><Button theme="Success" >Contactar</Button></Link>
+              </Zoom>
+              <Zoom duration={1000}>
+                <a href="#Servicios" className='w-full'><Button theme="Secondary" >Servicios</Button></a>
+              </Zoom>
+            </div>
           </div>
           {/* <div className='w-full flex justify-around' >
             <div className='flex flex-col'><span className='text-[#422C39] text-[16px]'>Experiencia</span></div>
@@ -146,8 +148,8 @@ function Home() {
             <Link href={`https://api.whatsapp.com/send?phone=${userDB.frontPage['whatsapp']}&text=Hola%20ESTIGMA%20DENTAL%20,%20quisiera%20hacer%20una%20consulta...%20`} className='w-full'><Button theme="Success" >Contactar</Button></Link>
           </div> */}
         </div>
-        
-      
+
+
       </section>
 
       <section className='w-full pt-[70px]' id="Servicios">
@@ -161,7 +163,7 @@ function Home() {
 
                 {/* <div className="inline-flex items-center justify-center w-full">
                     <hr className="w-64 h-px my-8 bg-[#422C39] border-0 dark:bg-gray-700" />
-                    <span className="absolute px-3 font-medium text-[#005578] -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900 z-0">•</span>
+                    <span className="absolute px-3 font-medium text-[#7fffd4] -translate-x-1/2 bg-white left-1/2 dark:text-gray-800 dark:bg-gray-900 z-0">•</span>
                   </div> */}
               </div>
             )
@@ -211,7 +213,7 @@ function Home() {
                   <CardH image={i['url']} service={i['titulo de servicio']} description={i['descripcion de servicio']} remote={i['servicio remoto']} cost={i['costo']} time={i['tiempo de entrega']} whatsapp={i['whatsapp de servicio']} i={i} index={index}></CardH>
                   <div className="inline-flex items-center justify-center w-full">
                     <hr className="w-64 h-px my-8 bg-[#422C39] border-0 dark:bg-gray-700" />
-                    <span className="absolute px-3 font-medium text-[#422C39] -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900 z-0">•</span>
+                    <span className="absolute px-3 font-medium text-[#422C39] -translate-x-1/2 bg-white left-1/2 dark:text-gray-800 dark:bg-gray-900 z-0">•</span>
                   </div>
                 </div>
               )
@@ -225,11 +227,11 @@ function Home() {
       <div className={`w-[80%] max-w-[400px] fixed bottom-[80px] lg:bottom-[18px] right-[18px] pt-14 pb-9 px-2 flex flex-grow flex-col justify-end rounded-[10px] border-gray-200 shadow bg-[#F1E6E0] ${whatsapp ? 'fixed' : 'hidden'} z-50`} >
         <div className='absolute top-0 left-0  w-full h-[50px] bg-[#00826A] rounded-t-[10px]'>
           <img src="/logo.png" className='absolute h-[35px] w-[35px] left-[5px] top-[7.5px]  rounded-[35px]' alt="" />
-          <div className='absolute flex flex-col left-[50px] top-[12px] text-white text-[12px]'>
+          <div className='absolute flex flex-col left-[50px] top-[12px] text-gray-800 text-[12px]'>
             <span className='block text-[10px] m-0'>Dr Lima</span>
             <span className='text-[8px] m-0'>en linea</span>
           </div>
-          <span className='absolute  right-[10px] top-[12px] px-[7.5px] py-[3px]  border-[1px] text-white text-[12px] rounded-[5px]' onClick={whatsappHandler} >X</span>
+          <span className='absolute  right-[10px] top-[12px] px-[7.5px] py-[3px]  border-[1px] text-gray-800 text-[12px] rounded-[5px]' onClick={whatsappHandler} >X</span>
         </div>
         <div
           className="ml-auto rounded-lg rounded-tr-none m-1 p-2 text-[12px] bg-[#DEF5D4] flex flex-col relative speech-bubble-right">
@@ -247,13 +249,13 @@ function Home() {
         </div>
       </div>
 
-      <footer className="w-screen bg-[#005578] text-center text-white mt-[70px] z-20" id="Contactos">
+      <footer className="w-screen bg-[#7fffd4] text-center text-gray-800 mt-[70px] z-20" id="Contactos">
         <div className="p-4">
-          <h3 className={`w-full text-white text-left font-bold text-[18px] uppercase pl-[5px]`}>Contactos</h3>
+          <h3 className={`w-full text-gray-800 text-left font-bold text-[18px] uppercase pl-[5px]`}>Contactos</h3>
           <br />
           <p className='w-full flex justify-start items-center py-4'>
             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M31.7656 33.5626L35.2656 30.0626C35.737 29.597 36.3335 29.2783 36.9825 29.1452C37.6315 29.012 38.3052 29.0702 38.9219 29.3126L43.1875 31.0157C43.8106 31.2686 44.3449 31.7004 44.7231 32.2565C45.1013 32.8126 45.3063 33.4682 45.3125 34.1407V41.9532C45.3089 42.4107 45.2127 42.8627 45.0298 43.282C44.8469 43.7013 44.581 44.0793 44.2482 44.3931C43.9153 44.707 43.5224 44.9502 43.0931 45.1083C42.6637 45.2663 42.2069 45.3358 41.75 45.3126C11.8594 43.4532 5.82812 18.1407 4.6875 8.45319C4.63455 7.97746 4.68292 7.49592 4.82945 7.04024C4.97597 6.58455 5.21731 6.16505 5.5376 5.80934C5.85789 5.45363 6.24987 5.16976 6.68774 4.97641C7.12562 4.78307 7.59947 4.68463 8.07812 4.68756H15.625C16.2984 4.68956 16.9559 4.89298 17.5128 5.27167C18.0697 5.65036 18.5006 6.187 18.75 6.81256L20.4531 11.0782C20.7035 11.6924 20.7674 12.3667 20.6368 13.017C20.5062 13.6672 20.1869 14.2646 19.7187 14.7344L16.2187 18.2344C16.2187 18.2344 18.2344 31.8751 31.7656 33.5626Z" fill="white" />
+              <path d="M31.7656 33.5626L35.2656 30.0626C35.737 29.597 36.3335 29.2783 36.9825 29.1452C37.6315 29.012 38.3052 29.0702 38.9219 29.3126L43.1875 31.0157C43.8106 31.2686 44.3449 31.7004 44.7231 32.2565C45.1013 32.8126 45.3063 33.4682 45.3125 34.1407V41.9532C45.3089 42.4107 45.2127 42.8627 45.0298 43.282C44.8469 43.7013 44.581 44.0793 44.2482 44.3931C43.9153 44.707 43.5224 44.9502 43.0931 45.1083C42.6637 45.2663 42.2069 45.3358 41.75 45.3126C11.8594 43.4532 5.82812 18.1407 4.6875 8.45319C4.63455 7.97746 4.68292 7.49592 4.82945 7.04024C4.97597 6.58455 5.21731 6.16505 5.5376 5.80934C5.85789 5.45363 6.24987 5.16976 6.68774 4.97641C7.12562 4.78307 7.59947 4.68463 8.07812 4.68756H15.625C16.2984 4.68956 16.9559 4.89298 17.5128 5.27167C18.0697 5.65036 18.5006 6.187 18.75 6.81256L20.4531 11.0782C20.7035 11.6924 20.7674 12.3667 20.6368 13.017C20.5062 13.6672 20.1869 14.2646 19.7187 14.7344L16.2187 18.2344C16.2187 18.2344 18.2344 31.8751 31.7656 33.5626Z" fill="black" />
             </svg>
             <span className='pl-[18px]'>
               {userDB.contactos && userDB.contactos.telefono} - {userDB.contactos && userDB.contactos.celular}
@@ -262,12 +264,12 @@ function Home() {
           <p className='w-full flex justify-start items-center py-4'>
             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_1_443)">
-                <path d="M44.9028 8.33348C44.7135 8.31397 44.5227 8.31397 44.3333 8.33348H5.44445C5.19521 8.33732 4.94762 8.37469 4.70834 8.44459L24.7778 28.4307L44.9028 8.33348Z" fill="white" />
-                <path d="M46.9583 10.2637L26.7361 30.4026C26.2156 30.9199 25.5116 31.2103 24.7778 31.2103C24.0439 31.2103 23.3399 30.9199 22.8194 30.4026L2.77776 10.4164C2.71615 10.6429 2.68348 10.8762 2.68054 11.1109V38.8887C2.68054 39.6254 2.9732 40.3319 3.49413 40.8529C4.01507 41.3738 4.72161 41.6664 5.45832 41.6664H44.3472C45.0839 41.6664 45.7905 41.3738 46.3114 40.8529C46.8323 40.3319 47.125 39.6254 47.125 38.8887V11.1109C47.1139 10.8215 47.0577 10.5357 46.9583 10.2637ZM7.3611 38.8887H5.43054V36.9026L15.5278 26.8887L17.4861 28.847L7.3611 38.8887ZM44.3194 38.8887H42.375L32.25 28.847L34.2083 26.8887L44.3055 36.9026L44.3194 38.8887Z" fill="white" />
+                <path d="M44.9028 8.33348C44.7135 8.31397 44.5227 8.31397 44.3333 8.33348H5.44445C5.19521 8.33732 4.94762 8.37469 4.70834 8.44459L24.7778 28.4307L44.9028 8.33348Z" fill="black" />
+                <path d="M46.9583 10.2637L26.7361 30.4026C26.2156 30.9199 25.5116 31.2103 24.7778 31.2103C24.0439 31.2103 23.3399 30.9199 22.8194 30.4026L2.77776 10.4164C2.71615 10.6429 2.68348 10.8762 2.68054 11.1109V38.8887C2.68054 39.6254 2.9732 40.3319 3.49413 40.8529C4.01507 41.3738 4.72161 41.6664 5.45832 41.6664H44.3472C45.0839 41.6664 45.7905 41.3738 46.3114 40.8529C46.8323 40.3319 47.125 39.6254 47.125 38.8887V11.1109C47.1139 10.8215 47.0577 10.5357 46.9583 10.2637ZM7.3611 38.8887H5.43054V36.9026L15.5278 26.8887L17.4861 28.847L7.3611 38.8887ZM44.3194 38.8887H42.375L32.25 28.847L34.2083 26.8887L44.3055 36.9026L44.3194 38.8887Z" fill="black" />
               </g>
               <defs>
                 <clipPath id="clip0_1_443">
-                  <rect width="50" height="50" fill="white" />
+                  <rect width="50" height="50" fill="black" />
                 </clipPath>
               </defs>
             </svg>
@@ -278,7 +280,7 @@ function Home() {
           </p>
           <p className='w-full flex justify-start items-center py-4'>
             <svg width="36" height="44" viewBox="0 0 36 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 0.125C13.4432 0.130376 9.07464 1.94292 5.85253 5.16504C2.63041 8.38716 0.817864 12.7557 0.812488 17.3125C0.80703 21.0363 2.02339 24.659 4.27499 27.625C4.27499 27.625 4.74374 28.2422 4.8203 28.3312L18 43.875L31.1859 28.3234C31.2547 28.2406 31.725 27.625 31.725 27.625L31.7265 27.6203C33.977 24.6556 35.1928 21.0346 35.1875 17.3125C35.1821 12.7557 33.3696 8.38716 30.1474 5.16504C26.9253 1.94292 22.5567 0.130376 18 0.125ZM18 23.5625C16.7639 23.5625 15.5555 23.1959 14.5277 22.5092C13.4999 21.8224 12.6988 20.8463 12.2257 19.7043C11.7527 18.5622 11.6289 17.3056 11.8701 16.0932C12.1112 14.8808 12.7065 13.7672 13.5806 12.8931C14.4546 12.019 15.5683 11.4237 16.7807 11.1826C17.9931 10.9414 19.2497 11.0652 20.3918 11.5383C21.5338 12.0113 22.5099 12.8124 23.1967 13.8402C23.8834 14.868 24.25 16.0764 24.25 17.3125C24.2479 18.9695 23.5888 20.558 22.4171 21.7296C21.2455 22.9013 19.657 23.5604 18 23.5625Z" fill="white" />
+              <path d="M18 0.125C13.4432 0.130376 9.07464 1.94292 5.85253 5.16504C2.63041 8.38716 0.817864 12.7557 0.812488 17.3125C0.80703 21.0363 2.02339 24.659 4.27499 27.625C4.27499 27.625 4.74374 28.2422 4.8203 28.3312L18 43.875L31.1859 28.3234C31.2547 28.2406 31.725 27.625 31.725 27.625L31.7265 27.6203C33.977 24.6556 35.1928 21.0346 35.1875 17.3125C35.1821 12.7557 33.3696 8.38716 30.1474 5.16504C26.9253 1.94292 22.5567 0.130376 18 0.125ZM18 23.5625C16.7639 23.5625 15.5555 23.1959 14.5277 22.5092C13.4999 21.8224 12.6988 20.8463 12.2257 19.7043C11.7527 18.5622 11.6289 17.3056 11.8701 16.0932C12.1112 14.8808 12.7065 13.7672 13.5806 12.8931C14.4546 12.019 15.5683 11.4237 16.7807 11.1826C17.9931 10.9414 19.2497 11.0652 20.3918 11.5383C21.5338 12.0113 22.5099 12.8124 23.1967 13.8402C23.8834 14.868 24.25 16.0764 24.25 17.3125C24.2479 18.9695 23.5888 20.558 22.4171 21.7296C21.2455 22.9013 19.657 23.5604 18 23.5625Z" fill="black" />
             </svg>
             <span className='pl-[34px]'>
               {userDB.contactos && userDB.contactos['direccion 1']} <br />
@@ -294,7 +296,7 @@ function Home() {
               href={userDB.contactos && userDB.contactos.facebook ? userDB.contactos.facebook : '#'}
               target='_blank'
               type="button"
-              className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+              className="m-1 h-9 w-9 rounded-full border-2 border-gray-800 uppercase leading-normal text-gray-800 transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
               data-te-ripple-init
               data-te-ripple-color="light">
               <svg
@@ -309,7 +311,7 @@ function Home() {
             <a
               href={userDB.contactos && userDB.contactos.twiter ? userDB.contactos.twiter : '#'}
               type="button"
-              className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+              className="m-1 h-9 w-9 rounded-full border-2 border-gray-800 uppercase leading-normal text-gray-800 transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
               data-te-ripple-init
               data-te-ripple-color="light">
               <svg
@@ -317,14 +319,14 @@ function Home() {
                 className="mx-auto h-full w-4"
                 fill="currentColor"
                 viewBox="0 0 24 24">
-                <path d="M19.1696 5.13274C19.0076 5.04902 18.85 4.95725 18.6972 4.85776C18.2528 4.564 17.8454 4.21786 17.4837 3.82681C16.5788 2.79136 16.2408 1.74091 16.1163 1.00545H16.1213C16.0173 0.39498 16.0603 0 16.0668 0H11.945V15.9382C11.945 16.1522 11.945 16.3637 11.936 16.5727C11.936 16.5987 11.9335 16.6227 11.932 16.6507C11.932 16.6622 11.932 16.6742 11.9295 16.6862V16.6952C11.886 17.267 11.7027 17.8194 11.3957 18.3038C11.0886 18.7882 10.6672 19.1897 10.1686 19.473C9.64888 19.7687 9.06108 19.9238 8.46317 19.923C6.54276 19.923 4.98634 18.3571 4.98634 16.4232C4.98634 14.4893 6.54276 12.9234 8.46317 12.9234C8.82669 12.923 9.18798 12.9802 9.53361 13.0928L9.53861 8.89606C8.48935 8.76052 7.42338 8.84391 6.40795 9.14096C5.39253 9.43802 4.44969 9.94229 3.63891 10.622C2.92847 11.2392 2.33121 11.9758 1.87399 12.7984C1.7 13.0983 1.04354 14.3038 0.96404 16.2602C0.914043 17.3706 1.24753 18.5211 1.40652 18.9966V19.0066C1.50651 19.2865 1.89399 20.242 2.52546 21.0474C3.03466 21.6935 3.63625 22.2611 4.31087 22.7319V22.7219L4.32087 22.7319C6.31627 24.0878 8.52866 23.9988 8.52866 23.9988C8.91164 23.9833 10.1946 23.9988 11.6515 23.3083C13.2674 22.5429 14.1874 21.4024 14.1874 21.4024C14.7751 20.721 15.2424 19.9444 15.5693 19.106C15.9423 18.1256 16.0668 16.9497 16.0668 16.4797V8.0241C16.1168 8.0541 16.7828 8.49458 16.7828 8.49458C16.7828 8.49458 17.7422 9.10955 19.2391 9.51003C20.3131 9.79501 21.76 9.85501 21.76 9.85501V5.76321C21.253 5.81821 20.2236 5.65822 19.1696 5.13274Z" fill="white" />
+                <path d="M19.1696 5.13274C19.0076 5.04902 18.85 4.95725 18.6972 4.85776C18.2528 4.564 17.8454 4.21786 17.4837 3.82681C16.5788 2.79136 16.2408 1.74091 16.1163 1.00545H16.1213C16.0173 0.39498 16.0603 0 16.0668 0H11.945V15.9382C11.945 16.1522 11.945 16.3637 11.936 16.5727C11.936 16.5987 11.9335 16.6227 11.932 16.6507C11.932 16.6622 11.932 16.6742 11.9295 16.6862V16.6952C11.886 17.267 11.7027 17.8194 11.3957 18.3038C11.0886 18.7882 10.6672 19.1897 10.1686 19.473C9.64888 19.7687 9.06108 19.9238 8.46317 19.923C6.54276 19.923 4.98634 18.3571 4.98634 16.4232C4.98634 14.4893 6.54276 12.9234 8.46317 12.9234C8.82669 12.923 9.18798 12.9802 9.53361 13.0928L9.53861 8.89606C8.48935 8.76052 7.42338 8.84391 6.40795 9.14096C5.39253 9.43802 4.44969 9.94229 3.63891 10.622C2.92847 11.2392 2.33121 11.9758 1.87399 12.7984C1.7 13.0983 1.04354 14.3038 0.96404 16.2602C0.914043 17.3706 1.24753 18.5211 1.40652 18.9966V19.0066C1.50651 19.2865 1.89399 20.242 2.52546 21.0474C3.03466 21.6935 3.63625 22.2611 4.31087 22.7319V22.7219L4.32087 22.7319C6.31627 24.0878 8.52866 23.9988 8.52866 23.9988C8.91164 23.9833 10.1946 23.9988 11.6515 23.3083C13.2674 22.5429 14.1874 21.4024 14.1874 21.4024C14.7751 20.721 15.2424 19.9444 15.5693 19.106C15.9423 18.1256 16.0668 16.9497 16.0668 16.4797V8.0241C16.1168 8.0541 16.7828 8.49458 16.7828 8.49458C16.7828 8.49458 17.7422 9.10955 19.2391 9.51003C20.3131 9.79501 21.76 9.85501 21.76 9.85501V5.76321C21.253 5.81821 20.2236 5.65822 19.1696 5.13274Z" fill="currentColor" />
               </svg>
             </a>
 
             <a
               href={userDB.contactos && userDB.contactos.gmail ? userDB.contactos.gmail : '#'}
               type="button"
-              className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+              className="m-1 h-9 w-9 rounded-full border-2 border-gray-800 uppercase leading-normal text-gray-800 transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
               data-te-ripple-init
               data-te-ripple-color="light">
               <svg
@@ -342,7 +344,7 @@ function Home() {
             <a
               href={userDB.contactos && userDB.contactos.instagram ? userDB.contactos.instagram : '#'}
               type="button"
-              className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+              className="m-1 h-9 w-9 rounded-full border-2 border-gray-800 uppercase leading-normal text-gray-800 transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
               data-te-ripple-init
               data-te-ripple-color="light">
               <svg
@@ -358,7 +360,7 @@ function Home() {
             <a
               href={userDB.contactos && userDB.contactos.linkedin ? userDB.contactos.linkedin : '#'}
               type="button"
-              className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+              className="m-1 h-9 w-9 rounded-full border-2 border-gray-800 uppercase leading-normal text-gray-800 transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
               data-te-ripple-init
               data-te-ripple-color="light">
               <svg
@@ -377,8 +379,8 @@ function Home() {
         <div
           className="p-4 text-center"
           style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}>
-          © 2024 Copyright 
-          <a className="text-whitehite underline" href="https://swoou.com/"
+          © 2024 Copyright
+          <a className="text-gray-800hite underline" href="https://swoou.com/"
           >Swoou</a
           >
         </div>

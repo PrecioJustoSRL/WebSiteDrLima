@@ -12,9 +12,9 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/logo.png" />
         <link rel='manifest' href='/manifest.json' />
         <link rel='apple-touch-icon' href='/favicon.png' />
-        <meta name="theme-color" content="#005578" />
-        <meta name="msapplication-navbutton-color" content="#005578" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="#005578" />
+        <meta name="theme-color" content="#7fffd4" />
+        <meta name="msapplication-navbutton-color" content="#7fffd4" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#7fffd4" />
         <meta name="description" content="TRAUMATOLOGO ORTOPEDISTA." />
         <meta name="keywords" content="TRAUMATOLOGO ORTOPEDISTA." />
         <meta name="author" content="DR. ABRAHAM LIMA" />
