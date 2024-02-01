@@ -9,7 +9,7 @@ export default function Card({image, name, text}) {
             <div className="flex flex-col items-center ">
                 <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={image} alt="Bonnie image" />
                 <h5 className="mb-1 text-xl font-medium text-gray-900 ">{name}</h5>
-                <span className="text-sm text-gray-8000 dark:text-gray-400">Visual Designer</span>
+                <span className="text-sm text-gray-8000 ">Visual Designer</span>
                 <p className="text-gray-950">{text}</p>
                 <Button theme='Primary'>Contactar</Button>
             </div>

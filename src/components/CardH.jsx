@@ -49,7 +49,7 @@ export default function CardH({ image, service, description, remote, cost, time,
                         <p className="text-gray-700 text-base text-center">{service}</p>
                     </div>
 
-                    <div className="flex items-baseline justify-between text-gray-900 dark:text-gray-800">
+                    <div className="flex items-baseline justify-between text-gray-900 ">
                         {cost.replace(/[^0-9]/g, "").length > 0
                             ? <div>
                                 <span className="text-3xl font-semibold">BS</span>

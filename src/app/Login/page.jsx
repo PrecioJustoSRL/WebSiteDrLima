@@ -30,24 +30,24 @@ export default function Home() {
   console.log(user)
   return (
 
-    <section className=" min-h-screen flex items-center pt-[70px] bg-gray-50 dark:bg-gray-900">
+    <section className=" min-h-screen flex items-center pt-[70px] bg-gray-50 ">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 lg:w-[40%]">
-        <a href="#" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-gray-800">
+        <a href="#" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 ">
           <img className="w-[70px] h-[70px] mr-2" src="/logo.png" alt="logo" />
           Dr. Lima
         </a>
-        <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+        <div className="w-full bg-white rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0  -gray-700">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-            <h1 className="text-xl text-center font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-gray-800">
+            <h1 className="text-xl text-center font-bold leading-tight tracking-tight text-gray-900 md:text-2xl ">
               Iniciar Sesión
             </h1>
             <form className="space-y-4 md:space-y-6" onSubmit={signInHandler}>
               <div>
-                <label for="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-800">Email</label>
+                <label for="email" className="block mb-2 text-sm font-medium text-gray-900 ">Email</label>
                 <Input type="email" name="email" id="email" placeholder="name@company.com" required="" />
               </div>
               <div>
-                <label for="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-800">Password</label>
+                <label for="password" className="block mb-2 text-sm font-medium text-gray-900 ">Password</label>
                 <Input type="password" name="password" id="password" placeholder="••••••••" required="" />
               </div>
               
