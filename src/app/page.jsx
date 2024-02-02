@@ -86,7 +86,7 @@ function Home() {
               <h1 className='w-full text-center text-[18px] lg:text-[16px]'>
                 <span className='text-[#6EE6FF] font-bold'>{userDB.frontPage['especialidad 1']}</span>
               </h1>
-            </JackInTheBox>
+            </JackInTheBox> 
             <h1 className='w-full text-left flex justify-between lg:text-[16px]'>
               <Slide cascade duration={1000} delay={100} direction={'left'}>
 
@@ -222,6 +222,9 @@ function Home() {
           </ul>
         </div>
       </section> */}
+
+
+
       <Navleft funcion={handlerState}></Navleft>
       <img src="/whatsapp.svg" className="fixed h-[50px] w-[50px] bottom-[80px] right-[18px] lg:bottom-[18px] z-30" onClick={whatsappHandler} alt="" />
 
@@ -229,10 +232,10 @@ function Home() {
         <div className='absolute top-0 left-0  w-full h-[50px] bg-[#00826A] rounded-t-[10px]'>
           <img src="/logo.png" className='absolute h-[35px] w-[35px] left-[5px] top-[7.5px]  rounded-[35px]' alt="" />
           <div className='absolute flex flex-col left-[50px] top-[12px] text-gray-800 text-[12px]'>
-            <span className='block text-[10px] m-0'>Dr Lima</span>
-            <span className='text-[8px] m-0'>en linea</span>
+            <span className='block text-[10px] m-0 text-white'>Dr Lima</span>
+            <span className='text-[8px] m-0 text-white'>en linea</span>
           </div>
-          <span className='absolute  right-[10px] top-[12px] px-[7.5px] py-[3px]  border-[1px] text-gray-800 text-[12px] rounded-[5px]' onClick={whatsappHandler} >X</span>
+          <span className='absolute  right-[10px] top-[12px] px-[7.5px] py-[3px]  border-[1px] text-[12px] rounded-[5px] text-white' onClick={whatsappHandler} >X</span>
         </div>
         <div
           className="ml-auto rounded-lg rounded-tr-none m-1 p-2 text-[12px] bg-[#DEF5D4] flex flex-col relative speech-bubble-right">
