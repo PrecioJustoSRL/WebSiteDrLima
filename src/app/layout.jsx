@@ -15,8 +15,8 @@ export default function RootLayout({ children }) {
         <meta name="theme-color" content="#00D2FF" />
         <meta name="msapplication-navbutton-color" content="#00D2FF" />
         <meta name="apple-mobile-web-app-status-bar-style" content="#00D2FF" />
-        <meta name="description" content="TRAUMATOLOGO ORTOPEDISTA." />
-        <meta name="keywords" content="TRAUMATOLOGO ORTOPEDISTA." />
+        <meta name="description" content="DR. ABRAHAM LIMA, TRAUMATOLOGO ORTOPEDISTA." />
+        <meta name="keywords" content="Traumatologo Sucre, traumatologo chuquisaca, TRAUMATOLOGO ORTOPEDISTA." />
         <meta name="author" content="DR. ABRAHAM LIMA" />
         <title>DR. ABRAHAM LIMA</title>
       </head>
