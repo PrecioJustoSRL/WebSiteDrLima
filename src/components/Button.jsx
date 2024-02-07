@@ -41,7 +41,7 @@ export default function Button({ theme, styled, click, children }) {
         case 'Secondary':
             return <button
                 type="submit"
-                className="text-white bg-[#6EE6FF] hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-[16px] w-full px-12 py-3 my-2 text-center"
+                className="text-black bg-[#6EE6FF] hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-[16px] w-full px-12 py-3 my-2 text-center"
                 // className="text-gray-800 bg-violet-700 hover:bg-violet-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center 
                 //  "
                 onClick={click}
@@ -52,7 +52,7 @@ export default function Button({ theme, styled, click, children }) {
         case 'Success':
             return <button
                 type="submit"
-                className="text-white bg-[#00D2FF] hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-[16px] w-full px-3 py-3 text-center"
+                className="text-black bg-[#00D2FF] hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-[16px] w-full px-3 py-3 text-center"
                 // className="text-gray-800 bg-violet-700 hover:bg-violet-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center 
                 //  "
                 onClick={click}

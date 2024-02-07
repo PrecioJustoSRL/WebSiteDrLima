@@ -79,12 +79,12 @@ function Home() {
           <div className='w-full min-h-[35vh] flex flex-col justify-around py-5 px-[15px]' style={{ background: 'linear-gradient(to left, #CFE0E8, #ffffff)' }}>
             <JackInTheBox cascade duration={1000} direction={'left'}>
               <h1 className='w-full text-center text-[18px] lg:text-[16px]'>
-                <span className='text-[#00D2FF] font-bold'>{userDB.frontPage['nombre']}</span>
+                <span className='text-gray-950 font-bold'>{userDB.frontPage['nombre']}</span>
               </h1>
             </JackInTheBox>
             <JackInTheBox cascade duration={1000} delay={100} direction={'left'}>
               <h1 className='w-full text-center text-[18px] lg:text-[16px]'>
-                <span className='text-[#6EE6FF] font-bold'>{userDB.frontPage['especialidad 1']}</span>
+                <span className='text-gray-800 font-bold'>{userDB.frontPage['especialidad 1']}</span>
               </h1>
             </JackInTheBox> 
             <h1 className='w-full text-left flex justify-between lg:text-[16px]'>
@@ -98,7 +98,7 @@ function Home() {
                   Lunes a Viernes</span>
               </Slide>
               <Slide cascade duration={1000} delay={100} direction={'right'}>
-                <span className=' '>9:00 - 17:00</span>
+                <span className=' '>11:00 - 13:30</span>
               </Slide>
             </h1>
             <h1 className='w-full text-left  flex justify-between   lg:text-[16px]'>
@@ -112,7 +112,7 @@ function Home() {
                 </span>
               </Slide>
               <Slide cascade duration={1000} delay={100} direction={'right'}>
-                <span className=' 	'>9:00 - 13:00</span>
+                <span className=' 	'>8:00 - 10:00</span>
               </Slide>
             </h1>
             <h1 className='  w-full text-left  flex   lg:text-[16px]'>
@@ -232,10 +232,10 @@ function Home() {
         <div className='absolute top-0 left-0  w-full h-[50px] bg-[#00826A] rounded-t-[10px]'>
           <img src="/logo.png" className='absolute h-[35px] w-[35px] left-[5px] top-[7.5px]  rounded-[35px]' alt="" />
           <div className='absolute flex flex-col left-[50px] top-[12px] text-gray-800 text-[12px]'>
-            <span className='block text-[10px] m-0 text-white'>Dr Lima</span>
-            <span className='text-[8px] m-0 text-white'>en linea</span>
+            <span className='block text-[10px] m-0 text-black'>Dr Lima</span>
+            <span className='text-[8px] m-0 text-black'>en linea</span>
           </div>
-          <span className='absolute  right-[10px] top-[12px] px-[7.5px] py-[3px]  border-[1px] text-[12px] rounded-[5px] text-white' onClick={whatsappHandler} >X</span>
+          <span className='absolute  right-[10px] top-[12px] px-[7.5px] py-[3px]  border-[1px] text-[12px] rounded-[5px] text-black' onClick={whatsappHandler} >X</span>
         </div>
         <div
           className="ml-auto rounded-lg rounded-tr-none m-1 p-2 text-[12px] bg-[#DEF5D4] flex flex-col relative speech-bubble-right">
@@ -253,9 +253,9 @@ function Home() {
         </div>
       </div>
 
-      <footer className="w-screen bg-[#6EE6FF] text-center text-white mt-[70px] z-20" id="Contactos">
+      <footer className="w-screen bg-[#6EE6FF] text-center text-black mt-[70px] z-20" id="Contactos">
         <div className="p-4">
-          <h3 className={`w-full text-white text-left font-bold text-[18px] uppercase pl-[5px]`}>Contactos</h3>
+          <h3 className={`w-full text-black text-left font-bold text-[18px] uppercase pl-[5px]`}>Contactos</h3>
           <br />
           <p className='w-full flex justify-start items-center py-4'>
             <svg width="50" height="50" viewBox="0 0 50 50" fill="white" xmlns="http://www.w3.org/2000/svg">

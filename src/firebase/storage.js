@@ -11,11 +11,11 @@ async function uploadIMG(ruteDB, ruteSTG, fileName, file, object, setUserData, s
     const imagesRef = ref(storage, `/${ruteSTG}/${fileName}`);
 
     const options = {
-        maxWidthOrHeight: 500,
-        maxSizeMB: 0.07,
+        maxWidthOrHeight: 1000,
+        maxSizeMB: 0.5,
         alwaysKeepResolution: true,
         useWebWorker: true,
-        maxIteration: 300,
+        maxIteration: 100,
         fileType: 'image/webp'
     }
 
