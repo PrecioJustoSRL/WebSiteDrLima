@@ -11,7 +11,7 @@ export default function List({ title, url, i }) {
     }
 
     function handlerEditData() {
-        setUserModal('Articulos')
+        setUserModal('De interes')
         setUserItem(i)
     }
     return (

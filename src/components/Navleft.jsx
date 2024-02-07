@@ -52,7 +52,7 @@ export default function Navbar({ children, funcion }) {
                     </svg>
                     <span className="sr-only">Icon description</span>
                 </button>
-                <button type="button" onClick={() => { setUserItem(undefined); funcion('Articulos') }} className="h-[50px] w-[50px] my-1 text-blue-700 bg-gray-950 border border-gray-700 flex- hover:bg-gray-500 hover:text-gray-800 focus:outline-none focus:ring-gray-500 font-medium rounded-full text-sm p-2.5 text-center flex justify-center items-center ">
+                <button type="button" onClick={() => { setUserItem(undefined); funcion('De interes') }} className="h-[50px] w-[50px] my-1 text-blue-700 bg-gray-950 border border-gray-700 flex- hover:bg-gray-500 hover:text-gray-800 focus:outline-none focus:ring-gray-500 font-medium rounded-full text-sm p-2.5 text-center flex justify-center items-center ">
                     <span className="text-gray-8000">A</span>
                     <span className="sr-only">Icon description</span>
                 </button>

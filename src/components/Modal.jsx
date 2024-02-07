@@ -346,13 +346,13 @@ export default function Modal({ theme, styled, click, children, }) {
                 </form>
             </div>
             break
-        case 'Articulos':
+        case 'De interes':
             return <div className="fixed top-0 flex justify-center w-full h-auto bg-[#000000b4] p-0 z-40">
                 <form className="relative w-[95%] h-screen overflow-y-scroll lg:w-[50%] bg-white border-b border-gray-900/10 pt-16 pb-4 px-5" onSubmit={addArticle}>
 
 
                     <div className="col-span-full">
-                        <h2 className="text-base font-semibold leading-7 text-gray-900">Administrar Articulos</h2>
+                        <h2 className="text-base font-semibold leading-7 text-gray-900">Administrar De interes</h2>
                         <label htmlFor="cover-photo" className="block text-sm font-medium leading-6 text-gray-900">Foto de servicio</label>
                         <div className="w-full flex justify-center">
                             <div className="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10 md:w-[250px] md:h-[200px]" style={{ backgroundImage: `url('${dataURL && dataURL.articleIMG && dataURL.articleIMG ? dataURL.articleIMG : (userDB && userDB.articleIMG.IMG2023.url)}')`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
